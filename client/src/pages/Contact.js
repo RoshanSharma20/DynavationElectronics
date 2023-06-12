@@ -51,7 +51,7 @@ function Contact() {
                         </div>
                         <div className='w-11/12 pt-4 md:pt-0 md:w-1/2'>
                             <h1 className='text-2xl md:text-3xl'>Come Visit US</h1>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.934782095936!2d77.53132298519182!3d13.076260153671676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x110573c38a840623%3A0xbe7ee25b4a472fa8!2sAnalog%20%26%20Digital%20Devices%20(ADD)!5e0!3m2!1sen!2sin!4v1685619614123!5m2!1sen!2sin" width="100%" height="100%" align="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='md:px-2 md:pb-8'></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.934782095936!2d77.53132298519182!3d13.076260153671676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x110573c38a840623%3A0xbe7ee25b4a472fa8!2sAnalog%20%26%20Digital%20Devices%20(ADD)!5e0!3m2!1sen!2sin!4v1685619614123!5m2!1sen!2sin" width="100%" height="100%" align="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='md:px-2 md:pb-8' title='contact map'></iframe>
                         </div>
                     </div>
                 </div>

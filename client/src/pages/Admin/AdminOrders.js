@@ -17,8 +17,6 @@ function AdminOrders() {
         "deliverd",
         "cancel",
     ]);
-
-    const [changeStatus, setCHangeStatus] = useState("");
     const [orders, setOrders] = useState([]);
     const [auth, setAuth] = useAuth();
 
@@ -120,7 +118,7 @@ function AdminOrders() {
                                             <Card className='m-5'>
                                                 <div className='flex flex-row'>
                                                     <div>
-                                                        <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="proudct image" width="300" />
+                                                        <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} width="300" />
                                                     </div>
                                                     <div className='ml-3 pt-2 grid justify-items-start'>
                                                         <p>Name : {p.name}</p>
