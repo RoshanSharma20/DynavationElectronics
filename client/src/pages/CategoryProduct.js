@@ -37,10 +37,13 @@ function CategoryProduct() {
                 window.location.reload()
             }
         }
+        // eslint-disable-next-line
     }, [params?.slug]);
 
     useEffect(() => {
+        // eslint-disable-next-line
         if (radio.length) filterProduct();
+        // eslint-disable-next-line
     }, [radio]);
 
     //get filtered products

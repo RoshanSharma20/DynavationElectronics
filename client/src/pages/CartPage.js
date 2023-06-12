@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 
 function CartPage() {
     const [cart, setCart] = useCart();
+    // eslint-disable-next-line
     const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
     const [clientToken, setClientToken] = useState("");
@@ -21,6 +22,7 @@ function CartPage() {
     const totalPrice = () => {
         try {
             let total = 0;
+            // eslint-disable-next-line
             cart?.map((item) => {
                 total = total + item.price;
             });
@@ -63,6 +65,7 @@ function CartPage() {
         try {
             setLoading(true);
             const { nonce } = await instance.requestPaymentMethod();
+            // eslint-disable-next-line
             const { data } = await axios.post(`${process.env.REACT_APP_API}/product/braintree/payment`, {
                 nonce,
                 cart,
@@ -94,21 +97,23 @@ function CartPage() {
                     <div className='flex'>
                         <div className='basis-2/4'>
                             <div className='flex flex-col'>
-                                {cart?.map((p) => (
-                                    <Card className='m-5'>
-                                        <div className='flex flex-row'>
-                                            <div>
-                                                <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} width="300" />
+                                {
+                                    // eslint-disable-next-line
+                                    cart?.map((p) => (
+                                        <Card className='m-5'>
+                                            <div className='flex flex-row'>
+                                                <div>
+                                                    <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt='product' width="300" />
+                                                </div>
+                                                <div className='ml-3 pt-2 grid justify-items-start'>
+                                                    <p>Name : {p.name}</p>
+                                                    <p>Description : {p.description.substring(0, 30)}</p>
+                                                    <p>price : {p.price}</p>
+                                                </div>
                                             </div>
-                                            <div className='ml-3 pt-2 grid justify-items-start'>
-                                                <p>Name : {p.name}</p>
-                                                <p>Description : {p.description.substring(0, 30)}</p>
-                                                <p>price : {p.price}</p>
-                                            </div>
-                                        </div>
-                                        <Button onClick={() => removeCartItem(p._id)} className='w-1/4'>Remove</Button>
-                                    </Card>
-                                ))}
+                                            <Button onClick={() => removeCartItem(p._id)} className='w-1/4'>Remove</Button>
+                                        </Card>
+                                    ))}
                             </div>
                         </div>
                         <div className='basis-2/4'>

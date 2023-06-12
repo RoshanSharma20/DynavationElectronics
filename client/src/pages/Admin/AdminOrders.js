@@ -10,6 +10,7 @@ import { Card, Table } from "flowbite-react";
 const { Option } = Select;
 
 function AdminOrders() {
+    // eslint-disable-next-line
     const [status, setStatus] = useState([
         "Not Process",
         "Processing",
@@ -18,6 +19,7 @@ function AdminOrders() {
         "cancel",
     ]);
     const [orders, setOrders] = useState([]);
+    // eslint-disable-next-line
     const [auth, setAuth] = useAuth();
 
     //get orders
@@ -36,6 +38,7 @@ function AdminOrders() {
 
     const handleChange = async (orderId, value) => {
         try {
+            // eslint-disable-next-line
             const { data } = await axios.put(`${process.env.REACT_APP_API}/auth/order-status/${orderId}`, {
                 status: value,
             });
@@ -118,7 +121,7 @@ function AdminOrders() {
                                             <Card className='m-5'>
                                                 <div className='flex flex-row'>
                                                     <div>
-                                                        <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} width="300" />
+                                                        <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="product" width="300" />
                                                     </div>
                                                     <div className='ml-3 pt-2 grid justify-items-start'>
                                                         <p>Name : {p.name}</p>

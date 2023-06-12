@@ -8,6 +8,7 @@ import moment from 'moment';
 
 function Orders() {
     const [orders, setOrders] = useState([]);
+    // eslint-disable-next-line
     const [auth, setAuth] = useAuth();
 
     const getOrders = async () => {
@@ -85,7 +86,7 @@ function Orders() {
                                             <Card className='m-5'>
                                                 <div className='flex flex-row'>
                                                     <div>
-                                                        <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} width="300" />
+                                                        <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt='product' width="300" />
                                                     </div>
                                                     <div className='ml-3 pt-2 grid justify-items-start'>
                                                         <p>Name : {p.name}</p>

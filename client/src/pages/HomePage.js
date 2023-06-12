@@ -21,7 +21,9 @@ import { Autoplay } from 'swiper';
 function HomePage() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
+    // eslint-disable-next-line
     const [page, setPage] = useState(1);
+    // eslint-disable-next-line
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const [cart, setCart] = useCart();
@@ -55,8 +57,10 @@ function HomePage() {
     };
 
     useEffect(() => {
+        // eslint-disable-next-line
         getAllProducts();
         getAllCategory();
+        // eslint-disable-next-line
     }, [])
     return (
         <Layout title={"Dynavation Electronics - Home Page"}>

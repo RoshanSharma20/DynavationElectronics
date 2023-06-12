@@ -19,6 +19,7 @@ function ProductDetails() {
         if (params?.slug) {
             getProduct();
         }
+        // eslint-disable-next-line
     }, [params?.slug])
 
     //get product

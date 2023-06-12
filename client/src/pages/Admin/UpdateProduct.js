@@ -97,6 +97,7 @@ function UpdateProduct() {
     useEffect(() => {
         getSingleProduct();
         getAllCategory();
+        // eslint-disable-next-line
     }, [])
     return (
         <Layout title={"Dashboard-Create Product"}>

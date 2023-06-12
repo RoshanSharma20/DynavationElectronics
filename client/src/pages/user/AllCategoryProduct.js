@@ -63,6 +63,7 @@ function AllCategoryProduct() {
     useEffect(() => {
         if (page === 1) return;
         loadMore();
+        // eslint-disable-next-line
     }, [page]);
 
     //load more function
@@ -91,10 +92,12 @@ function AllCategoryProduct() {
 
     useEffect(() => {
         if (!checked.length || !radio.lenth) getAllProducts();
+        // eslint-disable-next-line
     }, [checked.length, radio.lenth])
 
     useEffect(() => {
         if (checked.length || radio.length) filterProduct();
+        // eslint-disable-next-line
     }, [checked, radio]);
 
     //get filtered products

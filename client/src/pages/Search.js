@@ -4,6 +4,7 @@ import { useSearch } from '../context/search'
 import { Button, Card } from 'flowbite-react';
 
 function Search() {
+    // eslint-disable-next-line
     const [values, setValues] = useSearch();
     return (
         <Layout title={"search results"}>
