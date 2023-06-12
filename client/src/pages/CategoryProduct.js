@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout/Layout'
 import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Button, Card, Dropdown } from 'flowbite-react';
+import { Button, Dropdown } from 'flowbite-react';
 import { Radio } from 'antd';
 import { Prices } from '../components/Prices';
 import { useCart } from '../context/Cart';

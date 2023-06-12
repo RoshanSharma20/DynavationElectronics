@@ -1,4 +1,3 @@
-import { Button } from 'flowbite-react'
 import React from 'react'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
-import { Button, Card } from 'flowbite-react';
+import { Button } from 'flowbite-react';
 import { useCart } from '../context/Cart';
 import { toast } from 'react-toastify';
 

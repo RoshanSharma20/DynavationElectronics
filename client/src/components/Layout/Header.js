@@ -1,23 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FiSearch } from 'react-icons/fi'
-import { FaUserCircle, FaShoppingCart } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
 import Layout from './Layout'
 import { useAuth } from '../../context/auth'
 import { Navbar, Dropdown, Button } from 'flowbite-react'
 import SearchInput from '../Form/SearchInput'
 import useCategory from '../../hooks/useCategory'
-import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../context/Cart'
 import { Badge } from 'antd'
 import logo from '../../img/DE_logo.png'
-import Social from './Social'
 
 function Header() {
     const [auth, setAuth] = useAuth();
     const [cart] = useCart();
     const catgories = useCategory();
-    const navigate = useNavigate();
     const handleLogout = () => {
         setAuth({
             ...auth,

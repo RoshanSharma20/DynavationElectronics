@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import AdminMenu from '../../components/Layout/AdminMenu'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-import { Card } from 'flowbite-react'
 import { Link } from 'react-router-dom'
 
 

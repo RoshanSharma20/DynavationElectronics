@@ -1,5 +1,4 @@
 import { ListGroup } from 'flowbite-react'
-import { ListGroupItem } from 'flowbite-react/lib/esm/components/ListGroup/ListGroupItem'
 import React from 'react'
 import { Link } from 'react-router-dom'
 

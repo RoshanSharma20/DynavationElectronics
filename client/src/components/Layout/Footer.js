@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -10,7 +9,6 @@ function Footer() {
                     <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="">
                             <h6 className=" uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
-                                {/* <img src="./add logo.jpg" alt="" className="w-28 h-16" /> */}
                                 <span className="text-center m-2">Dynavation Electronics</span>
                             </h6>
                             <p>
