@@ -8,7 +8,7 @@ function Footer() {
                 <div className="mx-6 py-10 text-center md:text-left">
                     <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="">
-                            <h6 className=" uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
+                            <h6 className="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
                                 <span className="text-center m-2">Dynavation Electronics</span>
                             </h6>
                             <p>
@@ -32,12 +32,6 @@ function Footer() {
                             <p className="mb-4">
                                 <a href="#!" className="text-gray-600">Work Benches</a>
                             </p>
-                            <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Mechanical Engineering Lab</a>
-                            </p>
-                            <p className="md:mb-4">
-                                <a href="#!" className="text-gray-600">Automobile Engineering Lab</a>
-                            </p>
                         </div>
                         <div className="">
                             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start hidden md:block">
@@ -54,12 +48,6 @@ function Footer() {
                             </p>
                             <p className="mb-4">
                                 <a href="#!" className="text-gray-600">Electrical Lab Training Modules & Equipments</a>
-                            </p>
-                            <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Work Shop Machinery(Lathe & Milling)</a>
-                            </p>
-                            <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Automobile Service Station Machines</a>
                             </p>
                         </div>
                         <div className="">
@@ -93,7 +81,7 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="text-center p-6 bg-gray-400 /">
+                <div className="text-center p-1 bg-gray-400 /">
                     <span>© Copyright:</span>
                     <a className="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Dynavation Electronics</a>
                 </div>

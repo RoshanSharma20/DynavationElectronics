@@ -45,7 +45,7 @@ function Login() {
         <>
             <Layout title={"Register"}>
                 <center>
-                    <div className='w-5/6 pt-28 relative h-5/6 w-full'>
+                    <div className='w-5/6 pt-24 relative h-5/6'>
                         <img src={bgLogin} alt="" className='w-full h-5/6 object-cover absolute mix-blend-overlay' />
                         <div>
                             <h1 className='text-3xl md:text-5xl pt-8'>Login</h1>
@@ -69,7 +69,7 @@ function Login() {
                                     />
                                 </div>
                                 <div className='flex justify-start p-3 relative'>
-                                    <Link className="font-medium text-green-300 dark:text-blue-500 hover:underline" type="button" onClick={() => { navigate('/forgot-password') }}>
+                                    <Link className="font-medium text-green-300 dark:text-blue-500 hover:underline" type="button" to="/forgot-password">
                                         Forgot Password?
                                     </Link>
                                 </div>
