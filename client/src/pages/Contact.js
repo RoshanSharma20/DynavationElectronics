@@ -24,11 +24,11 @@ function Contact() {
         <Layout title={"Dynavation Electronics-Contact Us"}>
             <center>
                 <div className='w-5/6 pt-28'>
-                    <h1 className='text-3xl md:text-5xl'>Contact US</h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Contact US</h1>
                     <hr />
                     <div className='md:flex md:divide-x-4 pt-2'>
-                        <div className='w-3/4 md:w-1/2'>
-                            <h1 className='text-2xl'>We are here to help you</h1>
+                        <div className='w-5/6 md:w-1/2'>
+                            <h1 className='text-xl md:text-2xl lg:text-3xl'>We are here to help you</h1>
                             <form ref={form} onSubmit={sendEmail}>
                                 <div className='p-2'>
                                     <TextInput type="text" placeholder='full name' name='user_name' required
@@ -46,7 +46,7 @@ function Contact() {
                                     <Textarea className='p-2' placeholder='requirments' name='message' rows={5} required
                                     />
                                 </div>
-                                <Button gradientDuoTone="purpleToBlue" type='submit'><span className='text-md md:text-xl'>Send</span></Button>
+                                <Button gradientDuoTone="purpleToBlue" type='submit'><span className='text-sm md:text-base lg:text-lg xl:text-xl'>Send</span></Button>
                             </form>
                         </div>
                         <div className='w-11/12 pt-4 md:pt-0 md:w-1/2'>

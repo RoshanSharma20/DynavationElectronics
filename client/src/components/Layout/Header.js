@@ -24,12 +24,12 @@ function Header() {
     }
 
     const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-    const [isToggleVisible, setIsToggleVisible] = useState(false);
+    // const [isToggleVisible, setIsToggleVisible] = useState(false);
 
     useEffect(() => {
         function handleResize() {
-            setIsNavbarCollapsed(window.innerWidth >= 1110);
-            setIsToggleVisible(window.innerWidth <= 1110);
+            setIsNavbarCollapsed(window.innerWidth >= 1120);
+            // setIsToggleVisible(window.innerWidth >= 1120);
         }
 
         // Attach the resize event listener
@@ -57,37 +57,30 @@ function Header() {
                         <Navbar.Brand to="/" className='xl:pl-4 2xl:pl-16'>
                             <img
                                 src={logo} className="mr-3 object-fill h-16 sm:h-16" alt="Dynavation Electronics logo" />
-                            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+                            <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
                                 <p className='m-0 p-0'>Dynavation</p>
                                 <p className='m-0 p-0'>Electronics</p>
                             </span>
                         </Navbar.Brand>
                     </div>
                     <div className="flex md:order-2">
-                        {isToggleVisible && (
-                            <Navbar.Toggle onClick={handleToggle} />
-                        )}
+                        <Navbar.Toggle />
                     </div>
                     <Navbar.Collapse>
                         {isNavbarCollapsed && (
                             <>
-                                <div className={`flex ${isToggleVisible ? 'md:order-2' : ''}`}>
-                                    {isToggleVisible && (
-                                        <Navbar.Toggle onClick={handleToggle} />
-                                    )}
-                                </div>
                                 <SearchInput />
                                 <Link
-                                    to="/" className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2'>
+                                    to="/" className='text-md xl:text-lg pt-2 2xl:px-2'>
                                     Home
                                 </Link>
-                                <Link to="/about" className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2'>
+                                <Link to="/about" className='text-md xl:text-lg pt-2  2xl:px-2'>
                                     About
                                 </Link>
-                                <Link to="/" className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2  transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:bg-gradient-to-r from-gray-50 via-purple-500 to-gray-50 hover:scale-110'>
+                                <Link to="/" className='text-md xl:text-lg pt-2 xl:pl-1 2xl:px-2  transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:bg-gradient-to-r from-gray-50 via-purple-500 to-gray-50 hover:scale-110'>
                                     Resources
                                 </Link>
-                                <div className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2'>
+                                <div className='text-md xl:text-lg pt-2 2xl:px-2'>
                                     <Dropdown inline label="Categories" dismissOnClick={true}>
                                         <Dropdown.Item><Link to="/categories">All Categories</Link></Dropdown.Item>
                                         <div>
@@ -97,22 +90,22 @@ function Header() {
                                         </div>
                                     </Dropdown>
                                 </div>
-                                <Link to="/contactus" className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2'>
+                                <Link to="/contactus" className='text-md xl:text-lg pt-2  2xl:px-2'>
                                     Contact
                                 </Link>
                                 {
                                     !auth.user ? (
                                         <>
-                                            <Link to="/register" className='text-md xl:text-lg  pt-2 xl:px-1 2xl:px-2'>
+                                            <Link to="/register" className='text-md xl:text-lg  pt-2  2xl:px-2'>
                                                 Register
                                             </Link>
-                                            <Link to="/login" className='text-md xl:text-lg  pt-2 xl:px-1 2xl:px-2'>
+                                            <Link to="/login" className='text-md xl:text-lg  pt-2  2xl:px-2'>
                                                 Login
                                             </Link>
                                         </>
                                     ) : (
                                         <>
-                                            <div className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2'>
+                                            <div className='text-md xl:text-lg pt-2  2xl:px-2'>
                                                 <Dropdown inline
                                                     label={auth?.user?.name}
                                                     dismissOnClick={true} >
@@ -136,7 +129,7 @@ function Header() {
                                         <Link to="/cart">
                                             <FaShoppingCart className='text-2xl xl:text-3xl hidden lg:block'></FaShoppingCart>
                                         </Link>
-                                        <Link to="/cart" className='text-md xl:text-lg pt-2 xl:px-1 2xl:px-2 lg:hidden font-medium'>
+                                        <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 lg:hidden font-medium'>
                                             Cart
                                         </Link>
                                     </Badge>

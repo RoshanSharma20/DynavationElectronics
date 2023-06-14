@@ -120,7 +120,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Featured Products</h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'>Featured Products</h1>
                     <div>
                         <div className='flex flex-wrap'>
                             {products?.map((p) => (
@@ -134,11 +134,11 @@ function HomePage() {
                                             {p.description.substring(0, 30)}
                                         </div>
                                         <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
-                                            RS. <span className='text-lg'>{p.price}</span>
+                                            RS. <span className='text-md lg:text-lg'>{p.price}</span>
                                         </div>
                                         <div className='flex justify-center pb-2'>
-                                            <button className='mx-1 py-1 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-base xl:text-xl' onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
-                                            <button className='mx-1 py-1 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-base xl:text-xl' onClick={() => {
+                                            <button className='mx-1 py-1 md:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-base xl:text-xl' onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                                            <button className='mx-1 py-1 md:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-base xl:text-xl' onClick={() => {
                                                 setCart([...cart, p]);
                                                 localStorage.setItem("cart", JSON.stringify([...cart, p]));
                                                 toast.success("Item added to cart");
@@ -151,7 +151,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Our Esteemed Partners</h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'>Our Esteemed Partners</h1>
                     <div className='flex justify-evenly flex-wrap'>
                         {partners.map((partner, i) => (
                             <div className='p-8'>
@@ -169,54 +169,46 @@ function HomePage() {
                         ))}
                     </div>
                 </div>
-                <div className='w-5/6 pt-8'>
-                    <h1 className='text-3xl md:text-5xl'>Why Choose Us</h1>
+                <div className='w-10/12 xl:w-5/6 pt-8'>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'>Why Choose Us</h1>
                     <div className='flex flex-wrap md:flex-nowrap'>
                         <div className='py-2 md:py-0 px-2'>
                             <Card>
-                                <h5 className="text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <h5 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     <GrUserWorker></GrUserWorker>
                                 </h5>
-                                <p className="font-normal text-gray-700 dark:text-gray-400">
-                                    <p>
-                                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                    </p>
+                                <p className="text-sm md:text-base text-gray-700 dark:text-gray-400">
+                                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                                 </p>
                             </Card>
                         </div>
-                        <div className='px-2'>
+                        <div className='py-2 md:py-0 px-2'>
                             <Card>
-                                <h5 className="text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <h5 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     <BsGear></BsGear>
                                 </h5>
-                                <p className="font-normal text-gray-700 dark:text-gray-400">
-                                    <p>
-                                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                    </p>
+                                <p className="text-sm md:text-base text-gray-700 dark:text-gray-400">
+                                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                                 </p>
                             </Card>
                         </div>
-                        <div className='px-2'>
+                        <div className='py-2 md:py-0 px-2'>
                             <Card>
-                                <h5 className="text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <h5 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     <BiCheckShield></BiCheckShield>
                                 </h5>
-                                <p className="font-normal text-gray-700 dark:text-gray-400">
-                                    <p>
-                                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                    </p>
+                                <p className="text-sm md:text-base text-gray-700 dark:text-gray-400">
+                                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                                 </p>
                             </Card>
                         </div>
-                        <div className='px-2'>
+                        <div className='py-2 md:py-0 px-2'>
                             <Card>
-                                <h5 className="text-6xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                <h5 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     <FaShippingFast></FaShippingFast>
                                 </h5>
-                                <p className="font-normal text-gray-700 dark:text-gray-400">
-                                    <p>
-                                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                                    </p>
+                                <p className="text-sm md:text-base text-gray-700 dark:text-gray-400">
+                                    Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                                 </p>
                             </Card>
                         </div>
