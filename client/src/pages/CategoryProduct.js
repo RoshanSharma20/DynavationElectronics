@@ -89,7 +89,7 @@ function CategoryProduct() {
                                 </div>
                             </center>
                         </div>
-                        <div className='basis-full Lg:basis-10/12 xl:basis-4/5'>
+                        <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
                             <div className='flex justify-end mb-4 lg:hidden'>
                                 <div className='mx-2'>
                                     <Dropdown inline label="Filter">

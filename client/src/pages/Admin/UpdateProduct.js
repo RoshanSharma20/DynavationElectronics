@@ -4,7 +4,7 @@ import AdminMenu from '../../components/Layout/AdminMenu'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { Select } from 'antd';
-import { Button, TextInput } from 'flowbite-react';
+import { Button, Dropdown, TextInput } from 'flowbite-react';
 import { useNavigate, useParams } from 'react-router-dom';
 const { Option } = Select;
 
@@ -103,15 +103,19 @@ function UpdateProduct() {
         <Layout title={"Dashboard-Create Product"}>
             <center>
                 <div className='flex flex-row pt-28 w-5/6'>
-                    <div className='basis-1/5'>
+                    <div className='hidden lg:block lg:basis-2/12 xl:basis-1/4'>
                         <AdminMenu />
                     </div>
-                    <div className='basis-4/5'>
-                        <h1 className='text-3xl'> Update Product</h1>
+                    <div className='basis-full lg:basis-10/12 xl:basis-3/4'>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'> Update Product</h1>
+                        <div className='flex justify-end mb-4 lg:hidden'>
+                            <Dropdown inline label="Admin Panel">
+                                <AdminMenu />
+                            </Dropdown>
+                        </div>
                         <div className='w-5/6'>
                             <div className='mb-2'>
                                 <Select
-                                    // bordered={false}
                                     placeholder="Select a category"
                                     size="large"
                                     showSearch

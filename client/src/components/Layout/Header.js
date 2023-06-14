@@ -67,74 +67,74 @@ function Header() {
                         <Navbar.Toggle />
                     </div>
                     <Navbar.Collapse>
-                        {isNavbarCollapsed && (
-                            <>
-                                <SearchInput />
-                                <Link
-                                    to="/" className='text-md xl:text-lg pt-2 2xl:px-2'>
-                                    Home
-                                </Link>
-                                <Link to="/about" className='text-md xl:text-lg pt-2  2xl:px-2'>
-                                    About
-                                </Link>
-                                <Link to="/" className='text-md xl:text-lg pt-2 xl:pl-1 2xl:px-2  transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:bg-gradient-to-r from-gray-50 via-purple-500 to-gray-50 hover:scale-110'>
-                                    Resources
-                                </Link>
-                                <div className='text-md xl:text-lg pt-2 2xl:px-2'>
-                                    <Dropdown inline label="Categories" dismissOnClick={true}>
-                                        <Dropdown.Item><Link to="/categories">All Categories</Link></Dropdown.Item>
-                                        <div>
-                                            {catgories?.map((c) => (
-                                                <Dropdown.Item><Link to={`/category/${c.slug}`}>{c.name}</Link></Dropdown.Item>
-                                            ))}
-                                        </div>
-                                    </Dropdown>
+                        {/* {isNavbarCollapsed && (
+                            <> */}
+                        <SearchInput />
+                        <Link
+                            to="/" className='text-md xl:text-lg pt-2 2xl:px-2'>
+                            Home
+                        </Link>
+                        <Link to="/about" className='text-md xl:text-lg pt-2  2xl:px-2'>
+                            About
+                        </Link>
+                        <Link to="/" className='text-md xl:text-lg pt-2 xl:pl-1 2xl:px-2  transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:bg-gradient-to-r from-gray-50 via-purple-500 to-gray-50 hover:scale-110'>
+                            Resources
+                        </Link>
+                        <div className='text-md xl:text-lg pt-2 2xl:px-2'>
+                            <Dropdown inline label="Categories" dismissOnClick={true}>
+                                <Dropdown.Item><Link to="/categories">All Categories</Link></Dropdown.Item>
+                                <div>
+                                    {catgories?.map((c) => (
+                                        <Dropdown.Item><Link to={`/category/${c.slug}`}>{c.name}</Link></Dropdown.Item>
+                                    ))}
                                 </div>
-                                <Link to="/contactus" className='text-md xl:text-lg pt-2  2xl:px-2'>
-                                    Contact
+                            </Dropdown>
+                        </div>
+                        <Link to="/contactus" className='text-md xl:text-lg pt-2  2xl:px-2'>
+                            Contact
+                        </Link>
+                        {
+                            !auth.user ? (
+                                <>
+                                    <Link to="/register" className='text-md xl:text-lg  pt-2  2xl:px-2'>
+                                        Register
+                                    </Link>
+                                    <Link to="/login" className='text-md xl:text-lg  pt-2  2xl:px-2'>
+                                        Login
+                                    </Link>
+                                </>
+                            ) : (
+                                <>
+                                    <div className='text-md xl:text-lg pt-2  2xl:px-2'>
+                                        <Dropdown inline
+                                            label={auth?.user?.name}
+                                            dismissOnClick={true} >
+                                            <Dropdown.Item>
+                                                <Link to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`} className='text-md'>
+                                                    Dashboard
+                                                </Link>
+                                            </Dropdown.Item>
+                                            <Dropdown.Item>
+                                                <Link to="/login" onClick={handleLogout} className='text-md'>
+                                                    Logout
+                                                </Link>
+                                            </Dropdown.Item>
+                                        </Dropdown>
+                                    </div>
+                                </>
+                            )
+                        }
+                        <div className='pt-2'>
+                            <Badge count={cart?.length} showZero size="small" offset={[7, 4]}>
+                                <Link to="/cart">
+                                    <FaShoppingCart className='text-2xl xl:text-3xl hidden lg:block'></FaShoppingCart>
                                 </Link>
-                                {
-                                    !auth.user ? (
-                                        <>
-                                            <Link to="/register" className='text-md xl:text-lg  pt-2  2xl:px-2'>
-                                                Register
-                                            </Link>
-                                            <Link to="/login" className='text-md xl:text-lg  pt-2  2xl:px-2'>
-                                                Login
-                                            </Link>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <div className='text-md xl:text-lg pt-2  2xl:px-2'>
-                                                <Dropdown inline
-                                                    label={auth?.user?.name}
-                                                    dismissOnClick={true} >
-                                                    <Dropdown.Item>
-                                                        <Link to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`} className='text-md'>
-                                                            Dashboard
-                                                        </Link>
-                                                    </Dropdown.Item>
-                                                    <Dropdown.Item>
-                                                        <Link to="/login" onClick={handleLogout} className='text-md'>
-                                                            Logout
-                                                        </Link>
-                                                    </Dropdown.Item>
-                                                </Dropdown>
-                                            </div>
-                                        </>
-                                    )
-                                }
-                                <div className='pt-2'>
-                                    <Badge count={cart?.length} showZero size="small" offset={[7, 4]}>
-                                        <Link to="/cart">
-                                            <FaShoppingCart className='text-2xl xl:text-3xl hidden lg:block'></FaShoppingCart>
-                                        </Link>
-                                        <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 lg:hidden font-medium'>
-                                            Cart
-                                        </Link>
-                                    </Badge>
-                                </div>
-                            </>)}
+                                <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 lg:hidden font-medium'>
+                                    Cart
+                                </Link>
+                            </Badge>
+                        </div>
+                        {/* </>)} */}
                     </Navbar.Collapse>
                 </Navbar>
             </Layout>

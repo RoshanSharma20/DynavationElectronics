@@ -4,7 +4,7 @@ import AdminMenu from '../../components/Layout/AdminMenu'
 import axios from 'axios';
 import { toast } from 'react-toastify'
 import { TableCell } from 'flowbite-react/lib/esm/components/Table/TableCell';
-import { Button, Table } from 'flowbite-react';
+import { Button, Dropdown, Table } from 'flowbite-react';
 import CategoryForm from '../../components/Form/CategoryForm';
 import { Modal } from 'antd';
 
@@ -91,15 +91,20 @@ function CreateCategory() {
     return (
         <Layout title={"Dashboard-Create Category"}>
             <center><div className='flex flex-row pt-28 w-5/6'>
-                <div className='basis-1/4'>
+                <div className='hidden lg:block lg:basis-2/12 xl:basis-1/4'>
                     <AdminMenu />
                 </div>
-                <div className='basis-3/4'>
-                    <h1 className='text-3xl'>Manage Category</h1>
+                <div className='basis-full lg:basis-10/12 xl:basis-3/4'>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Manage Category</h1>
+                    <div className='flex justify-end mb-4 lg:hidden'>
+                        <Dropdown inline label="Admin Panel">
+                            <AdminMenu />
+                        </Dropdown>
+                    </div>
                     <div className='py-2'>
                         <CategoryForm handleSubmit={handleSubmit} value={name} setValue={setName} />
                     </div>
-                    <div className='w-4/6 pt-2'>
+                    <div className='w-full md:w-1/2 pt-2'>
                         <Table>
                             <Table.Head>
                                 <Table.HeadCell>Name</Table.HeadCell>
