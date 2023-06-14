@@ -137,8 +137,8 @@ function HomePage() {
                                             RS. <span className='text-md lg:text-lg'>{p.price}</span>
                                         </div>
                                         <div className='flex justify-center pb-2'>
-                                            <button className='mx-1 py-1 md:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-base xl:text-xl' onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
-                                            <button className='mx-1 py-1 md:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-base xl:text-xl' onClick={() => {
+                                            <button className='mx-1 py-1 sm:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-md xl:text-xl' onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                                            <button className='mx-1 py-1 sm:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-md xl:text-xl' onClick={() => {
                                                 setCart([...cart, p]);
                                                 localStorage.setItem("cart", JSON.stringify([...cart, p]));
                                                 toast.success("Item added to cart");

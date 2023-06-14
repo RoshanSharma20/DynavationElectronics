@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Button } from 'flowbite-react';
+import { Button, Dropdown } from 'flowbite-react';
 import { Checkbox, Radio } from 'antd';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -112,56 +112,83 @@ function AllCategoryProduct() {
 
     return (
         <Layout title={"Dynavation Electronics-All Products"}>
-            <center>
-                <div className='flex flex-row pt-28'>
-                    {/* filtering by category */}
-                    <div className='basis-1/5 text-xl'>
-                        <h4>Filter by Category</h4>
-                        <div className='flex flex-col items-start pl-16'>
-                            {categories?.map(c => (
-                                <div><Checkbox key={c._id} onChange={(e) => handleFilter(e.target.checked, c._id)}>{c.name}</Checkbox></div>
+            {/* <center> */}
+            <div className='flex flex-row pt-24'>
+                {/* filtering by category */}
+                <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5 text-xl'>
+                    <h4 className='text-sm lg:text-base xl:text-lg pl-4'>Filter by Category</h4>
+                    <div className='flex flex-col items-start pl-8'>
+                        {categories?.map(c => (
+                            <div><Checkbox key={c._id} onChange={(e) => handleFilter(e.target.checked, c._id)}>{c.name}</Checkbox></div>
+                        ))}
+                    </div>
+                    {/* filtering by price */}
+                    <h4 className='text-sm lg:text-base xl:text-lg pl-4'>Filter by Prices</h4>
+                    <div className='flex flex-col items-start pl-8'>
+                        <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+                            {Prices?.map(p => (
+                                <div key={p._id}>
+                                    <Radio value={p.array}>{p.name}</Radio>
+                                </div>
                             ))}
-                        </div>
-                        {/* filtering by price */}
-                        <h4>Filter by Prices</h4>
-                        <div className='flex flex-col items-start pl-16'>
-                            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-                                {Prices?.map(p => (
-                                    <div key={p._id}>
-                                        <Radio value={p.array}>{p.name}</Radio>
-                                    </div>
-                                ))}
-                            </Radio.Group>
-                        </div>
+                        </Radio.Group>
+                    </div>
+                    <center>
                         <div className='pt-2'>
                             <Button onClick={() => window.location.reload()}>Reset Filters</Button>
                         </div>
-                    </div>
-                    <div className='basis-4/5 pr-12'>
-                        <h4 className='text-center text-3xl md:text-4xl'>All Products
-                        </h4>
+                    </center>
+                </div>
+                <center>
+                    <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
+                        <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>All Products</h4>
+                        <div className='flex justify-end mb-4 lg:hidden'>
+                            <div className='mx-2'>
+                                <Dropdown inline label="Filter">
+                                    <div>
+                                        {categories?.map(c => (
+                                            <div><Checkbox key={c._id} onChange={(e) => handleFilter(e.target.checked, c._id)}>{c.name}</Checkbox></div>
+                                        ))}
+                                    </div>
+                                </Dropdown>
+                            </div>
+                            <div className='mx-2'>
+                                <Dropdown inline label="filter by prices">
+                                    <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+                                        {Prices?.map(p => (
+                                            <div key={p._id}>
+                                                <Radio value={p.array}>{p.name}</Radio>
+                                            </div>
+                                        ))}
+                                    </Radio.Group>
+                                </Dropdown>
+                            </div>
+                            <div className='mx-2'>
+                                <Button onClick={() => window.location.reload()}>Reset Filters</Button>
+                            </div>
+                        </div>
                         <div>
                             <div className='flex flex-wrap'>
                                 {products?.map((p) => (
-                                    <div className='w-1/4 px-2 pb-2' key={p._id} >
+                                    <div className='w-1/2 md:w-1/3 lg:w-1/4 px-2 pb-2' key={p._id} >
                                         <div className='group border-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105'>
-                                            <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" className='w-auto h-48 rounded-t-md' />
-                                            <h5 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:underline">
+                                            <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" className='w-auto h-24 sm:h-32 md:h-36 xl:h-48 rounded-t-md' />
+                                            <div className="text-xl xl:text-2xl font-bold text-gray-900 dark:text-white group-hover:underline">
                                                 {p.name}
-                                            </h5>
-                                            <h1 className="font-normal text-gray-700 dark:text-gray-400">
+                                            </div>
+                                            <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
                                                 {p.description.substring(0, 30)}
-                                            </h1>
-                                            <h1 className="font-normal text-gray-700 dark:text-gray-400">
-                                                RS. <span className='text-lg'>{p.price}</span>
-                                            </h1>
+                                            </div>
+                                            <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
+                                                RS. <span className='text-md lg:text-lg'>{p.price}</span>
+                                            </div>
                                             <div className='flex justify-center pb-2'>
-                                                <button className='mx-1 p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105' onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
-                                                <buttone className='mx-1 p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105' onClick={() => {
+                                                <button className='mx-1 py-1 sm:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-md xl:text-xl' onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                                                <button className='mx-1 py-1 sm:p-1 lg:p-2 xl:p-3 rounded-lg bg-white hover:bg-gradient-to-r from-pink-400 to-orange-500 border-2 border-red-300 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 text-sm lg:text-md xl:text-xl' onClick={() => {
                                                     setCart([...cart, p]);
                                                     localStorage.setItem("cart", JSON.stringify([...cart, p]));
                                                     toast.success("Item added to cart");
-                                                }}>Add to Cart</buttone>
+                                                }}>Add to Cart</button>
                                             </div>
                                         </div>
                                     </div>
@@ -179,8 +206,9 @@ function AllCategoryProduct() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </center>
+                </center>
+            </div>
+            {/* </center> */}
         </Layout>
     )
 }
