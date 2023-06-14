@@ -4,7 +4,7 @@ import UserMenu from '../../components/Layout/UserMenu';
 import Layout from '../../components/Layout/Layout';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { Button, TextInput } from 'flowbite-react';
+import { Button, Dropdown, TextInput } from 'flowbite-react';
 
 function Profile() {
     const [auth, setAuth] = useAuth();
@@ -52,12 +52,17 @@ function Profile() {
         <Layout title={"User Dashboard-Profile"}>
             <center>
                 <div className='flex flex-row pt-28 w-5/6'>
-                    <div className='basis-1/5'>
+                    <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5'>
                         <UserMenu />
                     </div>
-                    <div className='basis-4/5'>
-                        <h1>User Profile</h1>
-                        <form className='w-1/2' onSubmit={handleSubmit}>
+                    <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>User Profile</h1>
+                        <div className='flex justify-end mb-4 lg:hidden'>
+                            <Dropdown inline label="User Panel">
+                                <UserMenu />
+                            </Dropdown>
+                        </div>
+                        <form className='w-full lg:w-1/2' onSubmit={handleSubmit}>
                             <div className='pt-2'>
                                 <TextInput
                                     id="name"

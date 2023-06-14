@@ -3,7 +3,7 @@ import Layout from '../../components/Layout/Layout'
 import UserMenu from '../../components/Layout/UserMenu'
 import { useAuth } from '../../context/auth';
 import axios from 'axios';
-import { Card, Table } from 'flowbite-react';
+import { Card, Dropdown, Table } from 'flowbite-react';
 import moment from 'moment';
 
 function Orders() {
@@ -28,12 +28,17 @@ function Orders() {
     return (
         <Layout title={"User Dashboard-Orders"}>
             <center>
-                <div className='flex flex-row pt-28 w-5/6'>
-                    <div className='basis-1/5'>
+                <div className='flex flex-row pt-28 w-11/12 lg:w-5/6'>
+                    <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5'>
                         <UserMenu />
                     </div>
-                    <div className='basis-4/5'>
-                        <h1>User Orders</h1>
+                    <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Your Orders</h1>
+                        <div className='flex justify-end mb-4 lg:hidden'>
+                            <Dropdown inline label="User Panel">
+                                <UserMenu />
+                            </Dropdown>
+                        </div>
                         {orders?.map((o, i) => {
                             return (
                                 <div>

@@ -81,22 +81,45 @@ function CartPage() {
         }
     };
 
-
+    // text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl
     return (
         <Layout>
             <center>
-                <div className='pt-28 w-5/6'>
+                <div className='pt-24 w-11/12 lg:w-5/6'>
                     <div className='text-center'>
-                        <h1 className='text-3xl'>
+                        <h1 className='text-xl lg:text-2xl xl:text-3xl'>
                             {`Hello ${auth?.token && auth?.user?.name}`}
                         </h1>
-                        <h4 className='text-center text-lg'>
+                        <h4 className='text-center text-lg lg:text-xl xl:text-2xl'>
                             {cart?.length > 0 ? `you have ${cart.length} items in your cart ${auth?.token ? "" : "please login to checkout"}` : "your cart is empty"}
                         </h4>
                     </div>
-                    <div className='flex'>
-                        <div className='basis-2/4'>
-                            <div className='flex flex-col'>
+                    <div className='lg:flex'>
+                        <div className='lg:basis-2/4'>
+                            <div className='sm:hidden flex flex-wrap'>
+                                {
+                                    // eslint-disable-next-line
+                                    cart?.map((p) => (
+                                        <div className='w-1/2 md:w-1/3 lg:w-1/4 px-2 pb-2' key={p._id} >
+                                            <div className='group border-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 pb-1'>
+                                                <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" className='w-auto h-24 sm:h-32 md:h-36 xl:h-48 rounded-t-md' />
+                                                <div className="text-xl xl:text-2xl font-bold text-gray-900 dark:text-white group-hover:underline">
+                                                    {p.name}
+                                                </div>
+                                                <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
+                                                    {p.description.substring(0, 30)}
+                                                </div>
+                                                <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
+                                                    RS. <span className='text-md lg:text-lg'>{p.price}</span>
+                                                </div>
+                                                <Button onClick={() => removeCartItem(p._id)} className='w-2/4 px-1'>Remove</Button>
+                                            </div>
+
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                            <div className='hidden sm:block'>
                                 {
                                     // eslint-disable-next-line
                                     cart?.map((p) => (
@@ -116,7 +139,7 @@ function CartPage() {
                                     ))}
                             </div>
                         </div>
-                        <div className='basis-2/4'>
+                        <div className='lg:basis-2/4'>
                             <h2 className='text-xl'>Cart Summary</h2>
                             <p>Total | CheckOut | Payment</p>
                             <hr />
