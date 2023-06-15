@@ -57,7 +57,7 @@ function CategoryProduct() {
     }
     return (
         <Layout title={`Dynavation Electronics - ${params?.slug}`}>
-            <div className='pt-20'>
+            <div className='pt-24 md:pt-36 lg:pt-24'>
                 <center>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>{category?.name}</h1>
                     <div className='flex flex-row'>

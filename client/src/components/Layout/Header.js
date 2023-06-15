@@ -28,11 +28,10 @@ function Header() {
                 <Navbar
                     fluid={true}
                     rounded={true} className='bg-gray-50 fixed w-full z-20 top-0 left-0'>
-                    <div className='flex md:basis-full lg:basis-1/12'>
+                    <div className='flex md:basis-full lg:basis-1/12 md:flex justify-center lg:flex-none'>
                         <Navbar.Brand to="/" className='xl:pl-4 2xl:pl-16'>
-                            <img
-                                src={logo} className="mr-3 object-fill h-16 sm:h-16" alt="Dynavation Electronics logo" />
-                            <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
+                            <img src={logo} className="mr-3 object-fill h-16 sm:h-16 lg:h-14 xl:h-16" alt="Dynavation Electronics logo" />
+                            <span className="self-center whitespace-nowrap text-lg md:text-sm xl:text-lg font-semibold dark:text-white">
                                 <p className='m-0 p-0'>Dynavation</p>
                                 <p className='m-0 p-0'>Electronics</p>
                             </span>
@@ -42,8 +41,6 @@ function Header() {
                         <Navbar.Toggle />
                     </div>
                     <Navbar.Collapse>
-                        {/* {isNavbarCollapsed && (
-                            <> */}
                         <SearchInput />
                         <Link
                             to="/" className='text-md xl:text-lg pt-2 2xl:px-2'>
@@ -80,7 +77,7 @@ function Header() {
                                 </>
                             ) : (
                                 <>
-                                    <div className='text-md xl:text-lg pt-2  2xl:px-2'>
+                                    <div className='text-md xl:text-lg pt-2 2xl:px-2'>
                                         <Dropdown inline
                                             label={auth?.user?.name}
                                             dismissOnClick={true} >
@@ -102,14 +99,13 @@ function Header() {
                         <div className='pt-2'>
                             <Badge count={cart?.length} showZero size="small" offset={[7, 4]}>
                                 <Link to="/cart">
-                                    <FaShoppingCart className='text-2xl xl:text-3xl hidden lg:block'></FaShoppingCart>
+                                    <FaShoppingCart className='text-xl lg:text-2xl xl:text-3xl hidden md:block'></FaShoppingCart>
                                 </Link>
-                                <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 lg:hidden font-medium'>
+                                <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 md:hidden font-medium'>
                                     Cart
                                 </Link>
                             </Badge>
                         </div>
-                        {/* </>)} */}
                     </Navbar.Collapse>
                 </Navbar>
             </Layout>

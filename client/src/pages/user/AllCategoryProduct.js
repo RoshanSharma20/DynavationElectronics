@@ -113,7 +113,7 @@ function AllCategoryProduct() {
     return (
         <Layout title={"Dynavation Electronics-All Products"}>
             {/* <center> */}
-            <div className='flex flex-row pt-24'>
+            <div className='flex flex-row pt-24 md:pt-36 lg:pt-24'>
                 {/* filtering by category */}
                 <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5 text-xl'>
                     <h4 className='text-sm lg:text-base xl:text-lg pl-4'>Filter by Category</h4>

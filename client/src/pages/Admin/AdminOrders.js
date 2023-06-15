@@ -53,7 +53,7 @@ function AdminOrders() {
     return (
         <Layout title={"All Orders Data"}>
             <center>
-                <div className='flex flex-row pt-28 w-11/12 lg:w-5/6'>
+                <div className='flex flex-row pt-24 md:pt-36 lg:pt-24 w-11/12 lg:w-5/6'>
                     <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5'>
                         <AdminMenu />
                     </div>

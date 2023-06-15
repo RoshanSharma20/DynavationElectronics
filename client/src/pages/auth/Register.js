@@ -43,7 +43,7 @@ function Register() {
                 <center>
                     <div className='relative h-full w-full'>
                         <img src={bgSignup} alt="" className='w-full h-full object-cover absolute mix-blend-overlay' />
-                        <div className='w-5/6 pt-28 pb-4'>
+                        <div className='w-5/6 pt-24 md:pt-36 lg:pt-24 pb-4'>
                             <h1 className='text-3xl md:text-5xl text-white'>Register</h1>
                             <form className='w-3/4 md:w-1/2' onSubmit={handleSubmit}>
                                 <div className='p-2'>

@@ -85,7 +85,7 @@ function CartPage() {
     return (
         <Layout>
             <center>
-                <div className='pt-24 w-11/12 lg:w-5/6'>
+                <div className='pt-24 md:pt-36 lg:pt-24 w-11/12 lg:w-5/6'>
                     <div className='text-center'>
                         <h1 className='text-xl lg:text-2xl xl:text-3xl'>
                             {`Hello ${auth?.token && auth?.user?.name}`}

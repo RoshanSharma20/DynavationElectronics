@@ -9,7 +9,7 @@ function AdminDashboard() {
     return (
         <Layout title={"Admin Dashboard"}>
             <center>
-                <div className='flex flex-row pt-28 w-5/6'>
+                <div className='flex flex-row pt-24 md:pt-36 lg:pt-24 w-5/6'>
                     <div className='hidden lg:block lg:basis-2/12 xl:basis-1/4'>
                         <AdminMenu />
                     </div>

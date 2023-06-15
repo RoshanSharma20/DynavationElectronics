@@ -5,7 +5,7 @@ import AdminMenu from '../../components/Layout/AdminMenu'
 function Users() {
     return (
         <Layout title={"Dashboard-all users"}>
-            <div className='flex flex-row pt-28'>
+            <div className='flex flex-row pt-24 md:pt-36 lg:pt-24'>
                 <div className='basis-1/4'>
                     <AdminMenu />
                 </div>

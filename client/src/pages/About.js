@@ -8,7 +8,7 @@ function About() {
     return (
         <Layout title={"Dynavation Electronics-About us"}>
             <center>
-                <div className='w-5/6 lg:w-4/6 pt-28'>
+                <div className='w-5/6 lg:w-4/6 pt-24 md:pt-36 lg:pt-24'>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>About Us</h1>
                     <p className='p-1 xl:p-2 text-sm lg:text-md xl:text-lg'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis magni dolorum, vero earum quisquam libero ex aspernatur fugit obcaecati maiores maxime repudiandae blanditiis? Debitis ad incidunt cumque praesentium voluptas consequuntur!

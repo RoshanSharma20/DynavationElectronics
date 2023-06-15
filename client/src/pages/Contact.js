@@ -25,7 +25,7 @@ function Contact() {
         <Layout title={"Dynavation Electronics-Contact Us"}>
             <Social></Social>
             <center>
-                <div className='w-5/6 pt-28'>
+                <div className='w-5/6 pt-24 md:pt-36 lg:pt-24'>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Contact US</h1>
                     <hr />
                     <div className='md:flex md:divide-x-4 pt-2'>

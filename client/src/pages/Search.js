@@ -14,7 +14,7 @@ function Search() {
         <Layout title={"search results"}>
             <center>
                 <div className='w-5/6'>
-                    <div className='text-center pt-24'>
+                    <div className='text-center pt-24 md:pt-36 lg:pt-24'>
                         <h1>Search Results</h1>
                         <h6>{values?.results?.length < 1 ? "No products found" : `found ${values?.results?.length}`}</h6>
                         <div className='flex flex-wrap'>

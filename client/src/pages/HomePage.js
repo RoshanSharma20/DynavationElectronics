@@ -65,7 +65,7 @@ function HomePage() {
     return (
         <Layout title={"Dynavation Electronics - Home Page"}>
             <center>
-                <div className='lg:w-11/12 xl:w-5/6 pt-24'>
+                <div className='lg:w-11/12 xl:w-5/6 pt-24 md:pt-36 lg:pt-24'>
                     <Carousel autoplay draggable autoplaySpeed={7000} effect="fade">
                         <div>
                             <img

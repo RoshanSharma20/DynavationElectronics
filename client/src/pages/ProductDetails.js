@@ -46,7 +46,7 @@ function ProductDetails() {
     return (
         <Layout>
             <center>
-                <div className='w-11/12 pt-28'>
+                <div className='w-11/12 pt-24 md:pt-36 lg:pt-24'>
                     <h1 className='text-3xl md:text-4xl'>Product Details</h1>
                     <div>
                         <div>

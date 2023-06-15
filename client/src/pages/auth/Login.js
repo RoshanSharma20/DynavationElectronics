@@ -45,7 +45,7 @@ function Login() {
         <>
             <Layout title={"Register"}>
                 <center>
-                    <div className='w-5/6 pt-24 relative h-5/6'>
+                    <div className='w-5/6 pt-24 md:pt-36 lg:pt-24 relative h-5/6'>
                         <img src={bgLogin} alt="" className='w-full h-5/6 object-cover absolute mix-blend-overlay' />
                         <div>
                             <h1 className='text-3xl md:text-5xl pt-8'>Login</h1>
