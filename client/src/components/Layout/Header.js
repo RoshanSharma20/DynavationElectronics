@@ -22,31 +22,6 @@ function Header() {
         });
         localStorage.removeItem("auth");
     }
-
-    const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(false);
-    // const [isToggleVisible, setIsToggleVisible] = useState(false);
-
-    useEffect(() => {
-        function handleResize() {
-            setIsNavbarCollapsed(window.innerWidth >= 1120);
-            // setIsToggleVisible(window.innerWidth >= 1120);
-        }
-
-        // Attach the resize event listener
-        window.addEventListener('resize', handleResize);
-
-        // Check the initial screen width
-        handleResize();
-
-        // Cleanup by removing the resize event listener
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    function handleToggle() {
-        setIsNavbarCollapsed(!isNavbarCollapsed);
-    }
     return (
         <>
             <Layout title={"Header-Dynavation Electronics"}>

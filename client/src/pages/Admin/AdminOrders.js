@@ -53,21 +53,21 @@ function AdminOrders() {
     return (
         <Layout title={"All Orders Data"}>
             <center>
-                <div className="flex pt-28 w-11/12 xl:w-5/6">
-                    <div className='hidden lg:block lg:basis-2/12 xl:basis-1/4'>
+                <div className='flex flex-row pt-28 w-11/12 lg:w-5/6'>
+                    <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5'>
                         <AdminMenu />
                     </div>
-                    <div className='basis-full lg:basis-10/12 xl:basis-3/4'>
+                    <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
                         <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>All Orders</h1>
                         <div className='flex justify-end mb-4 lg:hidden'>
-                            <Dropdown inline label="Admin Panel">
+                            <Dropdown inline label="User Panel">
                                 <AdminMenu />
                             </Dropdown>
                         </div>
-                        <div className='w-full md:w-1/2 pt-2'>
-                            {orders?.map((o, i) => {
-                                return (
-                                    <div className="flex flex-wrap">
+                        {orders?.map((o, i) => {
+                            return (
+                                <div>
+                                    <div className='hidden md:block'>
                                         <Table>
                                             <Table.Head>
                                                 <Table.HeadCell>
@@ -100,12 +100,14 @@ function AdminOrders() {
                                                             onChange={(value) => handleChange(o._id, value)}
                                                             defaultValue={o?.status}
                                                         >
-                                                            {status.map((s, i) => (
-                                                                <Option key={i} value={s}>
-                                                                    {s}
-                                                                </Option>
-                                                            ))}
-                                                        </Select>
+                                                            {
+                                                                status.map((s, i) => (
+                                                                    <Option key={i} value={s}>
+                                                                        {s}
+                                                                    </Option>
+                                                                ))
+                                                            }
+                                                        </Select >
                                                     </Table.Cell>
                                                     <Table.Cell>
                                                         {o?.buyer?.name}
@@ -127,7 +129,7 @@ function AdminOrders() {
                                                 <Card className='m-5'>
                                                     <div className='flex flex-row'>
                                                         <div>
-                                                            <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="product" width="300" />
+                                                            <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt='product' width="300" />
                                                         </div>
                                                         <div className='ml-3 pt-2 grid justify-items-start'>
                                                             <p>Name : {p.name}</p>
@@ -139,9 +141,57 @@ function AdminOrders() {
                                             ))}
                                         </div>
                                     </div>
-                                )
-                            })}
-                        </div>
+                                    <div className='md:hidden'>
+                                        <div className='my-8 py-2 rounded-lg bg-gray-400'>
+                                            <h1>#:{i + 1}</h1>
+                                            <h1>Status:<Select
+                                                bordered={false}
+                                                onChange={(value) => handleChange(o._id, value)}
+                                                defaultValue={o?.status}
+                                            >
+                                                {
+                                                    status.map((s, i) => (
+                                                        <Option key={i} value={s}>
+                                                            {s}
+                                                        </Option>
+                                                    ))
+                                                }
+                                            </Select ></h1>
+                                            <h1>Date:{moment(o?.createAt).fromNow()}</h1>
+                                            <h1>Payment:{o?.payment.success ? "Success" : "Failed"}</h1>
+                                            <h1>Quantity:{o?.products?.length}</h1>
+                                            <div className='flex flex-wrap'>
+                                                {
+                                                    // eslint-disable-next-line
+                                                    o?.products?.map((p) => (
+                                                        <div className='flex items-stretch py-2'>
+                                                            <div className='basis-3/6 lg:basis-2/5 px-2'>
+                                                                <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" />
+                                                            </div>
+                                                            <div className='basis:3/6 lg:basis-3/5 self-center'>
+                                                                <div className='flex justify-center items-center'>
+                                                                    <div>
+                                                                        <h5 className="text-sm sm:text-md lg:text-lg xl:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                                            Name:{p.name}
+                                                                        </h5>
+                                                                        <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                                                            Description:{p.description}
+                                                                        </p>
+                                                                        <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                                                            Price:{p.price}
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </center>
@@ -150,3 +200,4 @@ function AdminOrders() {
 }
 
 export default AdminOrders
+

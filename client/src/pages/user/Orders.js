@@ -120,7 +120,6 @@ function Orders() {
                                                                 <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" />
                                                             </div>
                                                             <div className='basis:3/6 lg:basis-3/5 self-center'>
-                                                                {/* <div className='grid grid-cols-1 justify-items-start items-center'> */}
                                                                 <div className='flex justify-center items-center'>
                                                                     <div>
                                                                         <h5 className="text-sm sm:text-md lg:text-lg xl:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
