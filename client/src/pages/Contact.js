@@ -3,6 +3,7 @@ import Layout from '../components/Layout/Layout'
 import emailjs from '@emailjs/browser';
 import { Button, TextInput, Textarea } from 'flowbite-react';
 import { toast } from 'react-toastify';
+import Social from "../../src/components/Layout/Social"
 
 function Contact() {
     const form = useRef();
@@ -22,6 +23,7 @@ function Contact() {
 
     return (
         <Layout title={"Dynavation Electronics-Contact Us"}>
+            <Social></Social>
             <center>
                 <div className='w-5/6 pt-28'>
                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Contact US</h1>

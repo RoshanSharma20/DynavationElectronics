@@ -28,7 +28,6 @@ import ProductDetails from './pages/ProductDetails';
 import CategoryProduct from './pages/CategoryProduct';
 import CartPage from './pages/CartPage';
 import AdminOrders from './pages/Admin/AdminOrders';
-import Social from './components/Layout/Social';
 import AllCategoryProduct from './pages/user/AllCategoryProduct';
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
     <>
       <Router>
         <Header></Header>
-        <Social></Social>
+        {/* <Social></Social> */}
         <div>
           <Routes>
             <Route path='/' element={<HomePage />} />

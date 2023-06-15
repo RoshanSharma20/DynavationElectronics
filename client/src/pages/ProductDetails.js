@@ -51,30 +51,39 @@ function ProductDetails() {
                     <div>
                         <div>
                             <div className='flex items-stretch'>
-                                <div className='basis-2/5 px-2'>
+                                <div className='basis-3/6 lg:basis-2/5 px-2'>
                                     <img src={`${process.env.REACT_APP_API}/product/product-image/${product._id}`} alt="" />
                                 </div>
-                                <div className='basis-3/5 self-center'>
+                                <div className='basis:3/6 lg:basis-3/5 self-center'>
                                     {/* <div className='grid grid-cols-1 justify-items-start items-center'> */}
                                     <div className='flex justify-center items-center'>
                                         <div>
-                                            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h5 className="text-md sm:text-lg lg:text-xl xl:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                                 Name:{product.name}
                                             </h5>
-                                            <p className="font-normal text-gray-700 dark:text-gray-400">
+                                            <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
                                                 Description:{product.description}
                                             </p>
-                                            <p className="font-normal text-gray-700 dark:text-gray-400">
+                                            <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
                                                 Price:{product.price}
                                             </p>
-                                            <p className="font-normal text-gray-700 dark:text-gray-400">
+                                            <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
                                                 Category:{product?.category?.name}
                                             </p>
-                                            <Button>Add to Cart</Button>
+                                            <Button className='hidden lg:block text-sm md:text-md xl:text-lg' onClick={() => {
+                                                setCart([...cart, product]);
+                                                localStorage.setItem("cart", JSON.stringify([...cart, product]));
+                                                toast.success("Item added to cart");
+                                            }}>Add to Cart</Button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <Button className='lg:hidden text-sm md:text-md xl:text-lg mt-2' onClick={() => {
+                                setCart([...cart, product]);
+                                localStorage.setItem("cart", JSON.stringify([...cart, product]));
+                                toast.success("Item added to cart");
+                            }}>Add to Cart</Button>
                         </div>
                     </div>
                     <div className='pt-8'>
@@ -104,7 +113,6 @@ function ProductDetails() {
                                         </div>
                                     </div>
                                 </div>
-
                             ))}
                         </div>
                     </div>
