@@ -43,16 +43,16 @@ function Header() {
                     <Navbar.Collapse>
                         <SearchInput />
                         <Link
-                            to="/" className='text-md xl:text-lg pt-2 2xl:px-2'>
+                            to="/" className='text-md xl:text-lg pt-2 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             Home
                         </Link>
-                        <Link to="/about" className='text-md xl:text-lg pt-2  2xl:px-2'>
+                        <Link to="/about" className='text-md xl:text-lg pt-2 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             About
                         </Link>
-                        <Link to="/" className='text-md xl:text-lg pt-2 xl:pl-1 2xl:px-2  transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:bg-gradient-to-r from-gray-50 via-purple-500 to-gray-50 hover:scale-110'>
+                        <Link to="/" className='text-md xl:text-lg pt-2 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             Resources
                         </Link>
-                        <div className='text-md xl:text-lg pt-2 2xl:px-2'>
+                        <div className='text-md xl:text-lg pt-2 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             <Dropdown inline label="Categories" dismissOnClick={true}>
                                 <Dropdown.Item><Link to="/categories">All Categories</Link></Dropdown.Item>
                                 <div>
@@ -62,22 +62,22 @@ function Header() {
                                 </div>
                             </Dropdown>
                         </div>
-                        <Link to="/contactus" className='text-md xl:text-lg pt-2  2xl:px-2'>
+                        <Link to="/contactus" className='text-md xl:text-lg pt-2 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             Contact
                         </Link>
                         {
                             !auth.user ? (
                                 <>
-                                    <Link to="/register" className='text-md xl:text-lg  pt-2  2xl:px-2'>
+                                    <Link to="/register" className='text-md xl:text-lg  pt-2  2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                                         Register
                                     </Link>
-                                    <Link to="/login" className='text-md xl:text-lg  pt-2  2xl:px-2'>
+                                    <Link to="/login" className='text-md xl:text-lg  pt-2  2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                                         Login
                                     </Link>
                                 </>
                             ) : (
                                 <>
-                                    <div className='text-md xl:text-lg pt-2 2xl:px-2'>
+                                    <div className='text-md xl:text-lg pt-2 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                                         <Dropdown inline
                                             label={auth?.user?.name}
                                             dismissOnClick={true} >
@@ -99,9 +99,9 @@ function Header() {
                         <div className='pt-2'>
                             <Badge count={cart?.length} showZero size="small" offset={[7, 4]}>
                                 <Link to="/cart">
-                                    <FaShoppingCart className='text-xl lg:text-2xl xl:text-3xl hidden md:block'></FaShoppingCart>
+                                    <FaShoppingCart className='text-xl lg:text-2xl xl:text-3xl hidden md:block hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110'></FaShoppingCart>
                                 </Link>
-                                <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 md:hidden font-medium'>
+                                <Link to="/cart" className='text-md xl:text-lg pt-2  2xl:px-2 md:hidden font-medium hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110'>
                                     Cart
                                 </Link>
                             </Badge>

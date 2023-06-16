@@ -15,7 +15,7 @@ function Dashboard() {
                         <UserMenu />
                     </div>
                     <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
-                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>User Details</h1>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'>User Details</h1>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <Dropdown inline label="User Panel">
                                 <UserMenu />

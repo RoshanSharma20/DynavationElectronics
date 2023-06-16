@@ -33,7 +33,7 @@ function Orders() {
                         <UserMenu />
                     </div>
                     <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
-                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Your Orders</h1>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'>Your Orders</h1>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <Dropdown inline label="User Panel">
                                 <UserMenu />
@@ -105,7 +105,7 @@ function Orders() {
                                         </div>
                                     </div>
                                     <div className='md:hidden'>
-                                        <div className='my-8 py-2 rounded-lg bg-gray-400'>
+                                        <div className='my-8 py-2 rounded-lg bg-gray-200'>
                                             <h1>#:{i + 1}</h1>
                                             <h1>Status:{o?.status}</h1>
                                             <h1>Date:{moment(o?.createAt).fromNow()}</h1>

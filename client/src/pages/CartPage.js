@@ -104,7 +104,7 @@ function CartPage() {
                                             <div className='group border-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105 pb-1'>
                                                 <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" className='w-auto h-24 sm:h-32 md:h-36 xl:h-48 rounded-t-md' />
                                                 <div className="text-xl xl:text-2xl font-bold text-gray-900 dark:text-white group-hover:underline">
-                                                    {p.name.substring(0, 30)}
+                                                    {p.name.substring(0, 20)}
                                                 </div>
                                                 <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
                                                     {p.description.substring(0, 30)}
@@ -112,7 +112,7 @@ function CartPage() {
                                                 <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
                                                     RS. <span className='text-md lg:text-lg'>{p.price}</span>
                                                 </div>
-                                                <Button onClick={() => removeCartItem(p._id)} className='w-2/4 px-1'>Remove</Button>
+                                                <button onClick={() => removeCartItem(p._id)} className='w-2/4 px-1 border border-2 border-blue-700 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>Remove</button>
                                             </div>
                                         </div>
                                     ))
@@ -133,7 +133,7 @@ function CartPage() {
                                                     <p>price : {p.price}</p>
                                                 </div>
                                             </div>
-                                            <Button onClick={() => removeCartItem(p._id)} className='w-1/4'>Remove</Button>
+                                            <button onClick={() => removeCartItem(p._id)} className='w-1/4 border border-2 border-blue-700 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>Remove</button>
                                         </Card>
                                     ))}
                             </div>
@@ -147,15 +147,15 @@ function CartPage() {
                                 <>
                                     <div>
                                         <h4>Current Address : {auth?.user?.address}</h4>
-                                        <Button onClick={() => navigate('/dashboard/user/profile')}>update address</Button>
+                                        <button onClick={() => navigate('/dashboard/user/profile')} className='border border-2 border-blue-700 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>update address</button>
                                     </div>
                                 </>
                             ) : (
                                 <div>
                                     {auth?.token ? (
-                                        <Button onClick={() => navigate('/dashboard/user/profile')}>update address</Button>
+                                        <button onClick={() => navigate('/dashboard/user/profile')} className='border border-2 border-blue-700 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>update address</button>
                                     ) : (
-                                        <Button onClick={() => navigate('/login', { state: "/cart" })}>Please login to checkout</Button>
+                                        <button onClick={() => navigate('/login', { state: "/cart" })} className='border border-2 border-blue-700 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>Please login to checkout</button>
                                     )}
                                 </div>
                             )}
