@@ -79,7 +79,7 @@ function Orders() {
                                                         {moment(o?.createAt).fromNow()}
                                                     </Table.Cell>
                                                     <Table.Cell>
-                                                        {o?.payment.success ? "Success" : "Failed"}
+                                                        {o?.payment ? "Success" : "Failed"}
                                                     </Table.Cell>
                                                     <Table.Cell>
                                                         {o?.products?.length}
@@ -109,7 +109,7 @@ function Orders() {
                                             <h1>#:{i + 1}</h1>
                                             <h1>Status:{o?.status}</h1>
                                             <h1>Date:{moment(o?.createAt).fromNow()}</h1>
-                                            <h1>Payment:{o?.payment.success ? "Success" : "Failed"}</h1>
+                                            <h1>Payment:{o?.payment ? "Success" : "Failed"}</h1>
                                             <h1>Quantity:{o?.products?.length}</h1>
                                             <div className='flex flex-wrap'>
                                                 {

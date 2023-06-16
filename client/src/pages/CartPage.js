@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Layout from '../components/Layout/Layout'
 import { useCart } from '../context/Cart'
 import { useAuth } from '../context/auth';
 import { useNavigate } from 'react-router-dom';
 import { Button, Card } from 'flowbite-react';
-import DropIn from "braintree-web-drop-in-react";
 import axios from 'axios';
-import { toast } from 'react-toastify';
+
 
 function CartPage() {
     const [cart, setCart] = useCart();
     // eslint-disable-next-line
     const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
-    const [clientToken, setClientToken] = useState("");
+    // const [clientToken, setClientToken] = useState("");
     const [loading, setLoading] = useState(false);
-    const [instance, setInstance] = useState("");
+    // const [instance, setInstance] = useState("");
 
 
     //total price
@@ -46,42 +45,101 @@ function CartPage() {
     }
 
     //get payment gateway token
-    const getToken = async () => {
-        try {
-            const { data } = await axios.get(`${process.env.REACT_APP_API}/product/braintree/token`)
-            setClientToken(data?.clientToken);
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    // const getToken = async () => {
+    //     try {
+    //         const { data } = await axios.get(`${process.env.REACT_APP_API}/product/braintree/token`)
+    //         setClientToken(data?.clientToken);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
-    useEffect(() => {
-        getToken();
-    }, [auth?.token])
+    // useEffect(() => {
+    //     getToken();
+    // }, [auth?.token])
 
 
     //handle payments
-    const handlePayment = async () => {
-        try {
-            setLoading(true);
-            const { nonce } = await instance.requestPaymentMethod();
-            // eslint-disable-next-line
-            const { data } = await axios.post(`${process.env.REACT_APP_API}/product/braintree/payment`, {
-                nonce,
-                cart,
-            });
-            setLoading(false);
-            localStorage.removeItem("cart");
-            setCart([]);
-            navigate("/dashboard/user/orders");
-            toast.success("Payment Completed Successfully ");
-        } catch (error) {
-            console.log(error);
-            setLoading(false);
-        }
-    };
+    // const handlePayment = async () => {
+    //     try {
+    //         setLoading(true);
+    //         const { nonce } = await instance.requestPaymentMethod();
+    //         // eslint-disable-next-line
+    //         const { data } = await axios.post(`${process.env.REACT_APP_API}/product/braintree/payment`, {
+    //             nonce,
+    //             cart,
+    //         });
+    //         setLoading(false);
+    //         localStorage.removeItem("cart");
+    //         setCart([]);
+    //         navigate("/dashboard/user/orders");
+    //         toast.success("Payment Completed Successfully ");
+    //     } catch (error) {
+    //         console.log(error);
+    //         setLoading(false);
+    //     }
+    // };
 
-    // text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl
+    const checkoutHandler = async () => {
+        const { Key } = await axios.get(`${process.env.REACT_APP_API}/payment/get-payment-key`);
+        console.log(Key?.key);
+        const amount = totalPrice();
+        const { data } = await axios.post(`${process.env.REACT_APP_API}/payment/checkout`, { amount });
+
+        const options = {
+            key: Key?.key, // Enter the Key ID generated from the Dashboard
+            amount: data?.order?.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            currency: "INR",
+            name: "Roshan",
+            description: "Test Transaction",
+            image: "https://example.com/your_logo",
+            order_id: data?.order?.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            handler: async function (response) {
+                // alert(response.razorpay_payment_id);
+                const razorpay_payment_id = response.razorpay_payment_id;
+                // alert(response.razorpay_order_id);
+                const razorpay_order_id = response.razorpay_order_id;
+                // alert(response.razorpay_signature);
+                const razorpay_signature = response.razorpay_signature;
+                const { data } = await axios.post(`${process.env.REACT_APP_API}/product/payment-successfull`, { cart });
+                console.log(data);
+                if (data?.ok) {
+                    navigate("/paymentsuccess");
+                }
+                // const generated_signature = hmacSHA512(data?.order?.id + "|" + razorpay_payment_id, Key?.key);
+
+                // if (generated_signature == razorpay_signature) {
+                //     alert("payment is successfull")
+                // }
+                // else {
+                //     alert("check the error");
+                // }
+                // const { check } = await axios.post(`${process.env.REACT_APP_API}/payment/paymentverification`, { razorpay_payment_id, razorpay_order_id, razorpay_signature });
+                // if (check?.success) {
+                //     alert("payment and testing correct");
+                // }
+                // else {
+                //     alert("check some error");
+                // }
+            },
+            prefill: {
+                name: auth?.user?.name,
+                email: auth?.user?.email,
+                contact: auth?.user?.phone
+            },
+            notes: {
+                "address": "Razorpay Corporate Office"
+            },
+            theme: {
+                "color": "#3399cc"
+            }
+        };
+
+        const razor = new window.Razorpay(options);
+        razor.open();
+    }
+
+
     return (
         <Layout>
             <center>
@@ -160,25 +218,14 @@ function CartPage() {
                                 </div>
                             )}
                             <div className="mt-2">
-                                {!clientToken || !auth?.token || !cart?.length ? (
+                                {!auth?.token || !cart?.length ? (
                                     ""
                                 ) : (
                                     <>
-                                        <DropIn
-                                            options={{
-                                                authorization: clientToken,
-                                                paypal: {
-                                                    flow: "vault",
-                                                },
-                                            }}
-                                            onInstance={(instance) => setInstance(instance)}
-                                        />
-
                                         <Button
                                             className=""
-                                            onClick={handlePayment}
-                                            disabled={loading || !instance || !auth?.user?.address}
-                                        >
+                                            onClick={checkoutHandler}
+                                            disabled={loading || !auth?.user?.address}>
                                             {loading ? "Processing ...." : "Make Payment"}
                                         </Button>
                                     </>

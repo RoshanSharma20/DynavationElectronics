@@ -29,16 +29,17 @@ import CategoryProduct from './pages/CategoryProduct';
 import CartPage from './pages/CartPage';
 import AdminOrders from './pages/Admin/AdminOrders';
 import AllCategoryProduct from './pages/user/AllCategoryProduct';
+import PaymentSuccess from './pages/PaymentSuccess';
 
 function App() {
   return (
     <>
       <Router>
         <Header></Header>
-        {/* <Social></Social> */}
         <div>
           <Routes>
             <Route path='/' element={<HomePage />} />
+            <Route path='/paymentsuccess' element={<PaymentSuccess />} />
             <Route path='/product/:slug' element={<ProductDetails />} />
             <Route path='/categories' element={<AllCategoryProduct />} />
             <Route path='/cart' element={<CartPage />}></Route>

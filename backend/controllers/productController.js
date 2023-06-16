@@ -427,3 +427,23 @@ module.exports.braintreePayment = async function (req, res) {
         console.log(error);
     }
 }
+
+// handling the successfull payments
+module.exports.paymentSuccessfull = async function (req, res) {
+    try {
+        const { cart } = req.body;
+        const order = new OrderModel({
+            products: cart,
+            payment: true,
+            buyer: req.user._id,
+        }).save();
+        res.json({ ok: true });
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            success: false,
+            message: "Error while updating successfull payment",
+            error
+        })
+    }
+}
