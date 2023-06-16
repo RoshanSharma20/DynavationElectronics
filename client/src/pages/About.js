@@ -2,6 +2,14 @@ import React from 'react'
 import Layout from '../components/Layout/Layout'
 import logo from "../img/DE_logo.png"
 import { Card } from 'flowbite-react';
+import { HiDownload } from 'react-icons/hi'
+import certificateOfIEC from '../components/docs/certificateOfIEC.pdf';
+import Dynavation_ElectronicsPvtLtd from '../components/docs/Dynavation electronicsPvtLtd.pdf';
+import DynavationElectronicsISO from '../components/docs/DynavationElectronicsISO.pdf';
+import QRO_EGAC_DynavationElectronics from '../components/docs/QRO_EGAC_DynavationElectronics.pdf';
+import RegsitrationCetificate from '../components/docs/RegistrationCertificate.pdf';
+import UdyamRegistration from '../components/docs/UdyamRegistration.pdf';
+
 
 function About() {
     const partners = [{ name: "apple" }, { name: "bosch" }, { name: "ramaiah" }, { name: "dell" }, { name: "siemens" }, { name: "philips" }, { name: "samsung" }, { name: "bajaj" }, { name: "bsnl" }]
@@ -39,6 +47,17 @@ function About() {
                                 </Card>
                             </div>
                         ))}
+                    </div>
+                </div>
+                <div className='mt-16'>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>Documents</h1>
+                    <div className='flex justify-evenly flex-wrap'>
+                        <a href={certificateOfIEC} target='_blank' className='w-full lg:w-1/2 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>certificateOfIEC</a>
+                        <a href={Dynavation_ElectronicsPvtLtd} target='_blank' className='w-full lg:w-1/2 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>Dynavation_ElectronicsPvtLtd</a>
+                        <a href={DynavationElectronicsISO} target='_blank' className='w-full lg:w-1/2 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>DynavationElectronicsISO</a>
+                        <a href={QRO_EGAC_DynavationElectronics} target='_blank' className='w-full lg:w-1/2 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>QRO_EGAC_DynavationElectronics</a>
+                        <a href={RegsitrationCetificate} target='_blank' className='w-full lg:w-1/2 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>RegsitrationCetificate</a>
+                        <a href={UdyamRegistration} target='_blank' className='w-full lg:w-1/2 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>UdyamRegistration</a>
                     </div>
                 </div>
             </center>
