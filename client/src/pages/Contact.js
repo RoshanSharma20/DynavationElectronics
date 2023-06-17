@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Layout from '../components/Layout/Layout'
 import emailjs from '@emailjs/browser';
-import { Button, TextInput, Textarea } from 'flowbite-react';
+import { TextInput, Textarea } from 'flowbite-react';
 import { toast } from 'react-toastify';
 import Social from "../../src/components/Layout/Social"
 
