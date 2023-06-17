@@ -53,18 +53,18 @@ function About() {
                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'>Documents</h1>
                     <div className='flex justify-evenly flex-wrap'>
                         <div className='border border-2 py-3 my-2 rounded-lg'>
-                            <a href={certificateOfIEC} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>certificateOfIEC</a>
+                            <a href={certificateOfIEC} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>certificateOfIEC</a>
                         </div>
                         <div className='border border-2 py-2 my-2 rounded-lg'>
-                            <a href={Dynavation_ElectronicsPvtLtd} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>Dynavation_ElectronicsPvtLtd</a></div>
+                            <a href={Dynavation_ElectronicsPvtLtd} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>Dynavation_ElectronicsPvtLtd</a></div>
                         <div className='border border-2 py-2 my-2 rounded-lg'>
-                            <a href={DynavationElectronicsISO} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>DynavationElectronicsISO</a></div>
+                            <a href={DynavationElectronicsISO} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>DynavationElectronicsISO</a></div>
                         <div className='border border-2 py-2 my-2 rounded-lg'>
-                            <a href={QRO_EGAC_DynavationElectronics} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>QRO_EGAC_DynavationElectronics</a></div>
+                            <a href={QRO_EGAC_DynavationElectronics} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-2xl'></HiDownload>QRO_EGAC_DynavationElectronics</a></div>
                         <div className='border border-2 py-2 my-2 rounded-lg'>
-                            <a href={RegsitrationCetificate} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>RegsitrationCetificate</a></div>
+                            <a href={RegsitrationCetificate} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>RegsitrationCetificate</a></div>
                         <div className='border border-2 py-2 my-2 rounded-lg'>
-                            <a href={UdyamRegistration} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500'><HiDownload className='inline-block mx-2 text-xl lg:text-3xl xl:text-4xl'></HiDownload>UdyamRegistration</a>
+                            <a href={UdyamRegistration} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>UdyamRegistration</a>
                         </div>
                     </div>
                 </div>

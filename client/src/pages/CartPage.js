@@ -13,6 +13,7 @@ function CartPage() {
     const [auth, setAuth] = useAuth();
     const navigate = useNavigate();
     // const [clientToken, setClientToken] = useState("");
+    // eslint-disable-next-line
     const [loading, setLoading] = useState(false);
     // const [instance, setInstance] = useState("");
 
@@ -96,11 +97,11 @@ function CartPage() {
             order_id: data?.order?.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
             handler: async function (response) {
                 // alert(response.razorpay_payment_id);
-                const razorpay_payment_id = response.razorpay_payment_id;
+                // const razorpay_payment_id = response.razorpay_payment_id;
                 // alert(response.razorpay_order_id);
-                const razorpay_order_id = response.razorpay_order_id;
+                // const razorpay_order_id = response.razorpay_order_id;
                 // alert(response.razorpay_signature);
-                const razorpay_signature = response.razorpay_signature;
+                // const razorpay_signature = response.razorpay_signature;
                 // alert("payment successfull");
                 // if (data?.ok) {
                 navigate("/paymentsuccess");
