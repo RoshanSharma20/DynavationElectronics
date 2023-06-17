@@ -430,6 +430,8 @@ module.exports.braintreePayment = async function (req, res) {
 
 // handling the successfull payments
 module.exports.paymentSuccessfull = async function (req, res) {
+    console.log("lsdfjlsdkjflskgjlakj");
+    console.log(req.body);
     try {
         const { cart } = req.body;
         const order = new OrderModel({
