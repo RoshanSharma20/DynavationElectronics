@@ -7,19 +7,19 @@ import axios from 'axios';
 function PaymentSuccess() {
     const [cart, setCart] = useCart();
     const navigate = useNavigate();
-    const handleSuccessPayment = async () => {
-        const { data } = await axios.post(`${process.env.REACT_APP_API}/product/payment-successfull`, { cart });
-        console.log(data);
-        if (data?.ok) {
-            localStorage.removeItem("cart");
-            setCart([]);
-            navigate("/dashboard/user/orders");
-            toast.success("Payment Completed Successfully ");
-        }
-    }
     useEffect(() => {
+        const handleSuccessPayment = async () => {
+            const { data } = await axios.post(`${process.env.REACT_APP_API}/product/payment-successfull`, { cart });
+            console.log(data);
+            if (data?.ok) {
+                localStorage.removeItem("cart");
+                setCart([]);
+                navigate("/dashboard/user/orders");
+                toast.success("Payment Completed Successfully ");
+            }
+        }
         handleSuccessPayment();
-    }, [])
+    }, [cart, navigate, setCart]);
     return (
         <div className='pt-32'>
             <h1>payment success</h1>
