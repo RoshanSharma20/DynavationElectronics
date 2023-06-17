@@ -101,25 +101,9 @@ function CartPage() {
                 const razorpay_order_id = response.razorpay_order_id;
                 // alert(response.razorpay_signature);
                 const razorpay_signature = response.razorpay_signature;
-                const { data } = await axios.post(`${process.env.REACT_APP_API}/product/payment-successfull`, { cart });
-                console.log(data);
-                if (data?.ok) {
-                    navigate("/paymentsuccess");
-                }
-                // const generated_signature = hmacSHA512(data?.order?.id + "|" + razorpay_payment_id, Key?.key);
-
-                // if (generated_signature == razorpay_signature) {
-                //     alert("payment is successfull")
-                // }
-                // else {
-                //     alert("check the error");
-                // }
-                // const { check } = await axios.post(`${process.env.REACT_APP_API}/payment/paymentverification`, { razorpay_payment_id, razorpay_order_id, razorpay_signature });
-                // if (check?.success) {
-                //     alert("payment and testing correct");
-                // }
-                // else {
-                //     alert("check some error");
+                // alert("payment successfull");
+                // if (data?.ok) {
+                navigate("/paymentsuccess");
                 // }
             },
             prefill: {
