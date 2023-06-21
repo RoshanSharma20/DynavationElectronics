@@ -94,8 +94,8 @@ function HomePage() {
                     </Carousel>
                 </div>
                 <hr />
-                <div className='w-full xl:w-11/12 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Shop by Category</span></h1>
+                <div className='w-full xl:w-11/12 mt-8'>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Shop by Category</span></h1>
                     <div className='w-5/6 pt-2'>
                         {categories.length > 0 && <Swiper
                             navigation={true}
@@ -124,7 +124,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Featured Products</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Featured Products</span></h1>
                     <div>
                         <div className='flex flex-wrap'>
                             {products?.map((p) => (
@@ -155,7 +155,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Our Esteemed Partners</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Our Esteemed Partners</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
                         {partners.map((partner, i) => (
                             <div className='p-8'>
@@ -174,7 +174,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-10/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Why Choose Us</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Why Choose Us</span></h1>
                     <div className='flex flex-wrap md:flex-nowrap'>
                         <div className='py-2 md:py-0 px-2'>
                             <Card className='dark:bg-white'>
