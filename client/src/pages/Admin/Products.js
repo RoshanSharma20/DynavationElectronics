@@ -45,10 +45,10 @@ function Products() {
                                     <div key={p._id} >
                                         <div className='group border-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105'>
                                             <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt="" className='w-auto h-48 rounded-t-md' />
-                                            <h5 className="text-xl xl:text-2xl font-bold text-gray-900 dark:text-white group-hover:underline">
+                                            <h5 className="text-xl xl:text-2xl font-bold text-gray-900 group-hover:underline">
                                                 {p.name.substring(0, 30)}
                                             </h5>
-                                            <h1 className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
+                                            <h1 className="text-sm lg:text-base xl:text-xl text-gray-700">
                                                 {p.description.substring(0, 30)}
                                             </h1>
                                         </div>

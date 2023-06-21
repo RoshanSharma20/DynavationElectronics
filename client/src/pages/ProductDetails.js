@@ -46,7 +46,7 @@ function ProductDetails() {
         <Layout>
             <center>
                 <div className='w-11/12 pt-24 md:pt-36 lg:pt-24'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Product Details</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Product Details</span></h1>
                     <div>
                         <div>
                             <div className='flex items-stretch'>
@@ -57,16 +57,16 @@ function ProductDetails() {
                                     {/* <div className='grid grid-cols-1 justify-items-start items-center'> */}
                                     <div className='flex justify-center items-center'>
                                         <div>
-                                            <h5 className="text-md sm:text-lg lg:text-xl xl:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h5 className="text-md sm:text-lg lg:text-xl xl:text-2xl font-bold tracking-tight text-gray-900">
                                                 Name:{product.name}
                                             </h5>
-                                            <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                            <p className="text-sm md:text-md xl:text-lg text-gray-700">
                                                 Description:{product.description}
                                             </p>
-                                            <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                            <p className="text-sm md:text-md xl:text-lg text-gray-700">
                                                 Price:{product.price}
                                             </p>
-                                            <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                            <p className="text-sm md:text-md xl:text-lg text-gray-700">
                                                 Category:{product?.category?.name}
                                             </p>
                                             <button className='hidden lg:block text-sm md:text-md xl:text-lg px-1 border border-2 border-blue-700 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white' onClick={() => {

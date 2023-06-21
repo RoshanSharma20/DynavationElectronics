@@ -90,7 +90,7 @@ function AdminOrders() {
                                                 </Table.HeadCell>
                                             </Table.Head>
                                             <Table.Body className="divide-y">
-                                                <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                                                <Table.Row className="bg-white dark:border-gray-700">
                                                     <Table.Cell>
                                                         {i + 1}
                                                     </Table.Cell>
@@ -126,7 +126,7 @@ function AdminOrders() {
                                         </Table>
                                         <div className='flex flex-col'>
                                             {o?.products?.map((p, i) => (
-                                                <Card className='m-5'>
+                                                <Card className='m-5 dark:bg-white'>
                                                     <div className='flex flex-row'>
                                                         <div>
                                                             <img src={`${process.env.REACT_APP_API}/product/product-image/${p._id}`} alt='product' width="300" />
@@ -171,13 +171,13 @@ function AdminOrders() {
                                                             <div className='basis:3/6 lg:basis-3/5 self-center'>
                                                                 <div className='flex justify-center items-center'>
                                                                     <div>
-                                                                        <h5 className="text-sm sm:text-md lg:text-lg xl:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                                        <h5 className="text-sm sm:text-md lg:text-lg xl:text-xl font-bold tracking-tight text-gray-900">
                                                                             Name:{p.name}
                                                                         </h5>
-                                                                        <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                                                        <p className="text-sm md:text-md xl:text-lg text-gray-700">
                                                                             Description:{p.description}
                                                                         </p>
-                                                                        <p className="text-sm md:text-md xl:text-lg text-gray-700 dark:text-gray-400">
+                                                                        <p className="text-sm md:text-md xl:text-lg text-gray-700">
                                                                             Price:{p.price}
                                                                         </p>
                                                                     </div>
