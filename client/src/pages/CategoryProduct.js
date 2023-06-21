@@ -95,7 +95,7 @@ function CategoryProduct() {
                                     <Dropdown inline label="Filter">
                                         <div>
                                             {catgories?.map((c) => (
-                                                <Dropdown.Item><Link to={`/category/${c.slug}`}>{c.name}</Link></Dropdown.Item>
+                                                <Dropdown.Item><Link to={`/category/${c.slug}`}><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>{c.name}</span></Link></Dropdown.Item>
                                             ))}
                                         </div>
                                     </Dropdown>

@@ -26,7 +26,7 @@ function Contact() {
             <Social></Social>
             <center>
                 <div className='w-5/6 pt-24 md:pt-36 lg:pt-24'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'>Contact US</h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Contact US</span></h1>
                     <hr />
                     <div className='md:flex md:divide-x-4 pt-2'>
                         <div className='w-5/6 md:w-1/2'>
@@ -48,7 +48,7 @@ function Contact() {
                                     <Textarea className='p-2' placeholder='requirments' name='message' rows={5} required
                                     />
                                 </div>
-                                <button type='submit'><span className='text-sm md:text-base lg:text-lg xl:text-xl mx-2 py-2 px-1 sm:p-1 xl:p-2 rounded-lg bg-white hover:bg-green-500 hover:text-white border-2 border-green-500 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105'>Send</span></button>
+                                <button type='submit' className='my-4'><span className='text-sm md:text-base lg:text-lg xl:text-xl mx-2 py-2 px-1 sm:p-1 xl:p-2 rounded-lg bg-white hover:bg-green-500 hover:text-white border-2 border-green-500 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105'>Send</span></button>
                             </form>
                         </div>
                         <div className='w-11/12 pt-4 md:pt-0 md:w-1/2'>

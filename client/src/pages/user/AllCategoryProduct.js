@@ -112,7 +112,6 @@ function AllCategoryProduct() {
 
     return (
         <Layout title={"Dynavation Electronics-All Products"}>
-            {/* <center> */}
             <div className='flex flex-row pt-24 md:pt-36 lg:pt-24'>
                 {/* filtering by category */}
                 <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5 text-xl'>
@@ -139,9 +138,9 @@ function AllCategoryProduct() {
                         </div>
                     </center>
                 </div>
-                <center>
-                    <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
-                        <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'>All Products</h4>
+                <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
+                    <center>
+                        <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>All Products</span></h4>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <div className='mx-2'>
                                 <Dropdown inline label="Filter">
@@ -205,10 +204,9 @@ function AllCategoryProduct() {
                                 )}
                             </div>
                         </div>
-                    </div>
-                </center>
+                    </center>
+                </div>
             </div>
-            {/* </center> */}
         </Layout>
     )
 }

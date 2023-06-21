@@ -21,16 +21,16 @@ function Footer() {
                                 Popular Categories
                             </h6>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Testing & Measuring Instruments</a>
+                                <a href="#!" className="text-gray-600">DSO</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Decade Boxes</a>
+                                <a href="#!" className="text-gray-600">MULTIMETER</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Soldering & Desoldering Stations</a>
+                                <a href="#!" className="text-gray-600">VOLTMETER</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Work Benches</a>
+                                <a href="#!" className="text-gray-600">AMMETER</a>
                             </p>
                         </div>
                         <div className="">
@@ -38,16 +38,16 @@ function Footer() {
                                 Popular Categories
                             </h6>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Civil Engineering Lab</a>
+                                <a href="#!" className="text-gray-600">SOLDERING STATION</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Electronics/Physics Lab Training Modules</a>
+                                <a href="#!" className="text-gray-600">SMD COMPONENTS</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">RF & Microwave Lab Training Modules</a>
+                                <a href="#!" className="text-gray-600">MICROCONTROLLERS</a>
                             </p>
                             <p className="mb-4">
-                                <a href="#!" className="text-gray-600">Electrical Lab Training Modules & Equipments</a>
+                                <a href="#!" className="text-gray-600">TRAINER KITS</a>
                             </p>
                         </div>
                         <div className="">

@@ -58,7 +58,7 @@ function AdminOrders() {
                         <AdminMenu />
                     </div>
                     <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
-                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 bg-gradient-to-b from-slate-100 via-sky-400 to-blue-800 bg-clip-text text-transparent'>All Orders</h1>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>All Orders</span></h1>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <Dropdown inline label="User Panel">
                                 <AdminMenu />
@@ -116,7 +116,7 @@ function AdminOrders() {
                                                         {moment(o?.createAt).fromNow()}
                                                     </Table.Cell>
                                                     <Table.Cell>
-                                                        {o?.payment.success ? "Success" : "Failed"}
+                                                        {o?.payment ? "Success" : "Failed"}
                                                     </Table.Cell>
                                                     <Table.Cell>
                                                         {o?.products?.length}
@@ -158,7 +158,7 @@ function AdminOrders() {
                                                 }
                                             </Select ></h1>
                                             <h1>Date:{moment(o?.createAt).fromNow()}</h1>
-                                            <h1>Payment:{o?.payment.success ? "Success" : "Failed"}</h1>
+                                            <h1>Payment:{o?.payment ? "Success" : "Failed"}</h1>
                                             <h1>Quantity:{o?.products?.length}</h1>
                                             <div className='flex flex-wrap'>
                                                 {

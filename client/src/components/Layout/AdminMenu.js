@@ -7,20 +7,20 @@ function AdminMenu() {
         <>
             <div className='text-center'>
                 <div className="w-48">
-                    <ListGroup>
-                        <center><h1 className='text-lg py-2'>Admin Panel</h1></center>
+                    <ListGroup className='dark:bg-white'>
+                        <center><h1 className='text-lg py-2 dark:text-black'>Admin Panel</h1></center>
                         <hr />
                         <ListGroup.Item>
-                            <Link to='/dashboard/admin/create-category'>Create Category</Link>
+                            <Link to='/dashboard/admin/create-category' className='dark:text-black'>Create Category</Link>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <Link to='/dashboard/admin/create-product'>Create Product</Link>
+                            <Link to='/dashboard/admin/create-product' className='dark:text-black'>Create Product</Link>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <Link to='/dashboard/admin/products'>Products</Link>
+                            <Link to='/dashboard/admin/products' className='dark:text-black'>Products</Link>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            <Link to='/dashboard/admin/orders'>Orders</Link>
+                            <Link to='/dashboard/admin/orders' className='dark:text-black'>Orders</Link>
                         </ListGroup.Item>
                     </ListGroup>
                 </div>
