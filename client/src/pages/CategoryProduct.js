@@ -59,7 +59,7 @@ function CategoryProduct() {
         <Layout title={`Dynavation Electronics - ${params?.slug}`}>
             <div className='pt-24 md:pt-36 lg:pt-24'>
                 <center>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>{category?.name}</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>{category?.name}</span></h1>
                     <div className='flex flex-row'>
                         <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5 text-xl'>
                             {/* adding section to select category of products */}

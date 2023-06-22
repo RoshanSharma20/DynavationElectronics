@@ -26,7 +26,7 @@ function Contact() {
             <Social></Social>
             <center>
                 <div className='w-5/6 pt-24 md:pt-36 lg:pt-24'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Contact US</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Contact US</span></h1>
                     <hr />
                     <div className='md:flex md:divide-x-4 pt-2'>
                         <div className='w-5/6 md:w-1/2'>

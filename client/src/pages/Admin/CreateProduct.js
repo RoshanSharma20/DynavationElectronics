@@ -70,7 +70,7 @@ function CreateProduct() {
                         <AdminMenu />
                     </div>
                     <div className='basis-full lg:basis-10/12 xl:basis-3/4'>
-                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Create Product</span></h1>
+                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Create Product</span></h1>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <Dropdown inline label="Admin Panel">
                                 <AdminMenu />

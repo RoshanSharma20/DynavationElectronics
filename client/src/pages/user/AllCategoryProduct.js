@@ -140,7 +140,7 @@ function AllCategoryProduct() {
                 </div>
                 <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
                     <center>
-                        <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>All Products</span></h4>
+                        <h4 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>All Products</span></h4>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <div className='mx-2'>
                                 <Dropdown inline label="Filter">

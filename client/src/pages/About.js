@@ -17,7 +17,7 @@ function About() {
         <Layout title={"Dynavation Electronics-About us"}>
             <center>
                 <div className='w-5/6 lg:w-4/6 pt-24 md:pt-36 lg:pt-24'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl '><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>About Us</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>About Us</span></h1>
                     <p className='p-1 xl:p-2 text-sm lg:text-md xl:text-lg'>
                         DYNAVATION ELECTRONICS PVT LTD is a distinguished provider of top-quality and dependable electronic test and measuring instruments, as well as electronic repair and production tools, to the Indian market. Our unwavering commitment to excellence has earned us a reputable position in the industry, and we remain dedicated to upholding this standard in the future.
                     </p>
@@ -57,7 +57,7 @@ function About() {
                 </div>
                 {/* Our Esteemed Customers section */}
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Our Esteemed Partners</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Our Esteemed Partners</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
                         {partners.map((partner, i) => (
                             <div className='p-8'>
@@ -76,7 +76,7 @@ function About() {
                     </div>
                 </div>
                 <div className='mt-16 w-5/6'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Company Profile</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Company Profile</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
                         <div className='border border-2 py-3 my-2 rounded-lg'>
                             <a href={certificateOfIEC} target='_blank' className='w-full lg:w-1/3 mx-1 py-1 text-md lg:text-lg xl:text-xl 2xl:text-2xl underline underline-offset-2 hover:text-blue-500' rel="noopener noreferrer"><HiDownload className='inline-block mx-2 text-xl lg:text-2xl xl:text-3xl'></HiDownload>certificateOfIEC</a>
