@@ -22,6 +22,11 @@ const productSchema = new mongoose.Schema({
         ref: 'categoryModel',
         required: true
     },
+    subCategory: {
+        type: mongoose.ObjectId,
+        ref: 'subCategoryModel',
+        required: false
+    },
     quantity: {
         type: Number,
         required: true

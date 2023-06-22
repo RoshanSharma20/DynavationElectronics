@@ -9,6 +9,8 @@ const categoryRouter = require('./routes/categoryRouter');
 const productRouter = require('./routes/productRouter');
 // const resourceRouter = require('./routes/resourceRouter');
 const paymentRouter = require('./routes/paymentRouter');
+const subCategoryRouter = require('./routes/subCategoryRouter');
+const bodyParser = require('body-parser');
 
 //configuring env
 dotenv.config();//since env file is in root directory no need to add path of the file
@@ -21,6 +23,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 //middlewares
+app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb' }));
@@ -34,6 +37,7 @@ app.use(cookieParser());
 //all routes
 app.use('/auth', authRouter);
 app.use('/category', categoryRouter);
+app.use('/subCategory', subCategoryRouter);
 app.use('/product', productRouter);
 // app.use('/resource', resourceRouter);
 app.use('/payment', paymentRouter);

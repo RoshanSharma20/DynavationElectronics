@@ -155,7 +155,7 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Our Esteemed Partners</span></h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-8 my-8'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>Our Esteemed Partners</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
                         {partners.map((partner, i) => (
                             <div className='p-8'>
