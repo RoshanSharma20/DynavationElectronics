@@ -33,19 +33,19 @@ function Contact() {
                             <h1 className='text-xl md:text-2xl lg:text-3xl'>We are here to help you</h1>
                             <form ref={form} onSubmit={sendEmail}>
                                 <div className='p-2'>
-                                    <TextInput type="text" placeholder='full name' name='user_name' required
+                                    <TextInput color='dark:bg-white' type="text" placeholder='full name' name='user_name' required
                                     />
                                 </div>
                                 <div className='p-2'>
-                                    <TextInput type="email" placeholder='Email' name='user_email' required
+                                    <TextInput color='dark:bg-white' type="email" placeholder='Email' name='user_email' required
                                     />
                                 </div>
                                 <div className='p-2'>
-                                    <TextInput type="tel" name="phone" placeholder="888 888 8888" pattern="[0-9]{10}" maxlength="12" required
+                                    <TextInput color='dark:bg-white' type="tel" name="phone" placeholder="888 888 8888" pattern="[0-9]{10}" maxlength="12" required
                                     />
                                 </div>
                                 <div className='p-2'>
-                                    <Textarea className='p-2' placeholder='requirments' name='message' rows={5} required
+                                    <Textarea color='dark:bg-white' className='p-2' placeholder='requirments' name='message' rows={5} required
                                     />
                                 </div>
                                 <button type='submit' className='my-4'><span className='text-sm md:text-base lg:text-lg xl:text-xl mx-2 py-2 px-1 sm:p-1 xl:p-2 rounded-lg bg-white hover:bg-green-500 hover:text-white border-2 border-green-500 hover:border-none text-black hover:border-4 transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-105'>Send</span></button>

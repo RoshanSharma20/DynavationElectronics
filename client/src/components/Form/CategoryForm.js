@@ -7,7 +7,7 @@ function CategoryForm({ handleSubmit, value, setValue }) {
         <>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <TextInput type="text" placeholder="Enter New Category Name" value={value} onChange={(e) => setValue(e.target.value)} required />
+                    <TextInput color='dark:bg-white' type="text" placeholder="Enter New Category Name" value={value} onChange={(e) => setValue(e.target.value)} required />
                 </div>
                 <Button type="submit" className='my-2'>Submit</Button>
             </form>

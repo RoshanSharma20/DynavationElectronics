@@ -52,6 +52,7 @@ function Login() {
                             <form className='w-3/4 md:w-1/2' onSubmit={handleSubmit}>
                                 <div className='p-3'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="email"
                                         type="email"
                                         placeholder="Email"
@@ -61,6 +62,7 @@ function Login() {
                                 </div>
                                 <div className='p-3'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="password"
                                         type="password"
                                         placeholder='Password'

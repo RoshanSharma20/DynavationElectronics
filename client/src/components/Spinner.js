@@ -16,7 +16,7 @@ function Spinner({ path = "login" }) {
         return () => clearInterval(interval);
     }, [count, navigate, location, path])
     return (
-        <center className=''>
+        <center className='pt-24 md:pt-36 lg:pt-24'>
             <h1>Redirecting to you in {count} second</h1>
             <div
                 className="inline-block h-16 w-16 animate-spin rounded-full border-4 border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite]"

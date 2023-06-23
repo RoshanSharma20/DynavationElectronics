@@ -48,6 +48,7 @@ function Register() {
                             <form className='w-3/4 md:w-1/2' onSubmit={handleSubmit}>
                                 <div className='p-2'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="name"
                                         type="text"
                                         placeholder="Name"
@@ -57,6 +58,7 @@ function Register() {
                                 </div>
                                 <div className='p-2'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="email"
                                         type="email"
                                         placeholder="Email"
@@ -66,6 +68,7 @@ function Register() {
                                 </div>
                                 <div className='p-2'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="password"
                                         type="password"
                                         placeholder='password'
@@ -75,6 +78,7 @@ function Register() {
                                 </div>
                                 <div className='p-2'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="phone"
                                         type="text"
                                         placeholder="Phone"
@@ -84,6 +88,7 @@ function Register() {
                                 </div>
                                 <div className='p-2'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="address"
                                         type="text"
                                         placeholder="Address"
@@ -93,6 +98,7 @@ function Register() {
                                 </div>
                                 <div className='p-2'>
                                     <TextInput
+                                        color='dark:bg-white'
                                         id="answer"
                                         type="text"
                                         placeholder="type a secret answer"

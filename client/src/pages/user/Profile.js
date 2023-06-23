@@ -65,6 +65,7 @@ function Profile() {
                         <form className='w-full lg:w-1/2' onSubmit={handleSubmit}>
                             <div className='pt-2'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="name"
                                     type="text"
                                     placeholder="Name"
@@ -73,6 +74,7 @@ function Profile() {
                             </div>
                             <div className='pt-2'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="email"
                                     type="email"
                                     placeholder="Email"
@@ -82,6 +84,7 @@ function Profile() {
                             </div>
                             <div className='pt-2'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="password"
                                     type="password"
                                     placeholder='password'
@@ -90,6 +93,7 @@ function Profile() {
                             </div>
                             <div className='pt-2'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="phone"
                                     type="text"
                                     placeholder="Phone"
@@ -98,6 +102,7 @@ function Profile() {
                             </div>
                             <div className='pt-2'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="address"
                                     type="text"
                                     placeholder="Address"

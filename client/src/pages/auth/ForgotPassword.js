@@ -43,6 +43,7 @@ function ForgotPassword() {
                         <form className='w-3/4 md:w-1/2' onSubmit={handleSubmit}>
                             <div className='p-3'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="email"
                                     type="email"
                                     placeholder="Email"
@@ -52,15 +53,17 @@ function ForgotPassword() {
                             </div>
                             <div className='p-3'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="answer"
                                     type="text"
-                                    placeholder="Answer"
+                                    placeholder="Type the Secret Answer"
                                     value={answer} onChange={(e) => setAnswer(e.target.value)}
                                     required={true}
                                 />
                             </div>
                             <div className='p-3'>
                                 <TextInput
+                                    color='dark:bg-white'
                                     id="password"
                                     type="password"
                                     placeholder='New Password'

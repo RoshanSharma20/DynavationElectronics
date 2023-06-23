@@ -111,22 +111,22 @@ function CreateProduct() {
                             </div>
                             <div className='my-4'>
                                 <div>
-                                    <TextInput type="text" placeholder="Enter New Product Name" value={name} onChange={(e) => setName(e.target.value)} required />
+                                    <TextInput color='dark:bg-white' type="text" placeholder="Enter New Product Name" value={name} onChange={(e) => setName(e.target.value)} required />
                                 </div>
                             </div>
                             <div className='my-4'>
                                 <div>
-                                    <TextInput type="text" placeholder="Enter Product description" value={description} sizing="lg" onChange={(e) => setDescription(e.target.value)} required />
+                                    <TextInput color='dark:bg-white' type="text" placeholder="Enter Product description" value={description} sizing="lg" onChange={(e) => setDescription(e.target.value)} required />
                                 </div>
                             </div>
                             <div className='my-4'>
                                 <div>
-                                    <TextInput type="number" placeholder="Enter Product price" value={price} onChange={(e) => setPrice(e.target.value)} required />
+                                    <TextInput color='dark:bg-white' type="number" placeholder="Enter Product price" value={price} onChange={(e) => setPrice(e.target.value)} required />
                                 </div>
                             </div>
                             <div className='my-4'>
                                 <div>
-                                    <TextInput type="number" placeholder="Enter Product quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
+                                    <TextInput color='dark:bg-white' type="number" placeholder="Enter Product quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
                                 </div>
                             </div>
                             <div className='my-4'>
