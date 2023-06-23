@@ -75,11 +75,11 @@ module.exports.updateSubCategory = async function (req, res) {
 module.exports.subCategory = async function (req, res) {
     try {
         const { category } = req.body;
-        const subcategory = await SubCategoryModel.find({ category }).populate('category');
-        return res.status(200).send({
+        const subcat = await SubCategoryModel.find({ category }).populate('category');
+        return res.status(200).json({
             success: true,
             message: "All SubCategories List",
-            subcategory
+            subcategory: subcat
         })
     } catch (error) {
         console.log(error);

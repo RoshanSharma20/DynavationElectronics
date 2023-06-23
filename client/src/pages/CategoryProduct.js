@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout/Layout'
 import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Button, Dropdown } from 'flowbite-react';
+import { Dropdown } from 'flowbite-react';
 import { Radio } from 'antd';
 import { Prices } from '../components/Prices';
 import { useCart } from '../context/Cart';
@@ -59,7 +59,6 @@ function CategoryProduct() {
         <Layout title={`Dynavation Electronics - ${params?.slug}`}>
             <div className='pt-24 md:pt-36 lg:pt-24'>
                 <center>
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>{category?.name}</span></h1>
                     <div className='flex flex-row'>
                         <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5 text-xl'>
                             {/* adding section to select category of products */}
@@ -90,6 +89,7 @@ function CategoryProduct() {
                             </center>
                         </div>
                         <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
+                            <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>{category?.name}</span></h1>
                             <div className='flex justify-end mb-4 lg:hidden'>
                                 <div className='mx-2'>
                                     <Dropdown inline label="Filter">
@@ -112,7 +112,7 @@ function CategoryProduct() {
                                     </Dropdown>
                                 </div>
                                 <div className='mx-2'>
-                                    <Button onClick={() => window.location.reload()} className='border border-2 border-blue-700 px-2 py-1 rounded-lg sm:text-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>Reset Filters</Button>
+                                    <button onClick={() => window.location.reload()} className='border border-2 border-blue-700 px-2 py-1 rounded-lg sm:text-md transition ease-in-out delay-150 hover:-translate-y-1 duration-150 hover:scale-110 hover:border-0 hover:bg-blue-700 hover:text-white'>Reset Filters</button>
                                 </div>
                             </div>
                             <div className='flex flex-wrap'>

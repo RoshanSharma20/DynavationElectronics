@@ -13,6 +13,9 @@ function AdminMenu() {
                         <ListGroup.Item>
                             <Link to='/dashboard/admin/create-category' className='dark:text-black'>Create Category</Link>
                         </ListGroup.Item>
+                        {/* <ListGroup.Item>
+                            <Link to='/dashboard/admin/create-subcategory' className='dark:text-black'>Create Sub-Category</Link>
+                        </ListGroup.Item> */}
                         <ListGroup.Item>
                             <Link to='/dashboard/admin/create-product' className='dark:text-black'>Create Product</Link>
                         </ListGroup.Item>

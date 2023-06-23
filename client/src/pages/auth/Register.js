@@ -93,9 +93,9 @@ function Register() {
                                 </div>
                                 <div className='p-2'>
                                     <TextInput
-                                        id="answewr"
+                                        id="answer"
                                         type="text"
-                                        placeholder="answer"
+                                        placeholder="type a secret answer"
                                         value={answer} onChange={(e) => setAnswer(e.target.value)}
                                         required={true}
                                     />

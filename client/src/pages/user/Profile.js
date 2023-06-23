@@ -56,7 +56,7 @@ function Profile() {
                         <UserMenu />
                     </div>
                     <div className='basis-full lg:basis-10/12 xl:basis-4/5'>
-                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-2 my-10'><span className='border-2 rounded-2xl px-4 py-2 bg-blue-500 text-white'>User Profile</span></h1>
+                        <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>User Profile</span></h1>
                         <div className='flex justify-end mb-4 lg:hidden'>
                             <Dropdown inline label="User Panel">
                                 <UserMenu />
