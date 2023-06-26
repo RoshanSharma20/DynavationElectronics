@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Layout from '../components/Layout/Layout'
 import logo from '../img/DE_logo.png'
-import testing from "../img/740051.jpg"
+import slide1 from "../img/slide1.jpeg"
 import { Carousel } from 'antd'
 import { Card } from 'flowbite-react'
 import { FaShippingFast } from 'react-icons/fa'
@@ -73,11 +73,11 @@ function HomePage() {
                         <div>
                             <img
                                 alt="..."
-                                src={testing}
+                                src={slide1}
                                 className="object-cover h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto max-w-6xl rounded-lg shadow-xl dark:shadow-gray-800"
                             />
                         </div>
-                        <div >
+                        {/* <div >
                             <img
                                 alt="..."
                                 src={testing}
@@ -90,7 +90,7 @@ function HomePage() {
                                 src={testing}
                                 className="object-cover h-48 sm:h-64 md:h-80 lg:h-96 max-w-6xl xl:h-auto rounded-lg shadow-xl dark:shadow-gray-800"
                             />
-                        </div>
+                        </div> */}
                     </Carousel>
                 </div>
                 <hr />
@@ -114,7 +114,7 @@ function HomePage() {
                             {categories.map((c) => (
                                 <div>
                                     <SwiperSlide key={c._id}>
-                                        <button className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl px-2 py-1 rounded-lg border border-2 border-blue-700 hover:border-0 hover:bg-blue-700 hover:text-white'>
+                                        <button className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl px-2 py-1 rounded-lg border border-2 border-blue-700 hover:border-0 hover:bg-blue-700 hover:text-white' onClick={() => { navigate(`/category/${c.slug}`) }}>
                                             {c.name}
                                         </button>
                                     </SwiperSlide>
@@ -135,7 +135,7 @@ function HomePage() {
                                             {p.name.substring(0, 20)}
                                         </div>
                                         <div className="text-sm lg:text-base xl:text-xl text-gray-700 bg-gradient-to-b from-red-500 to-yellow-500 bg-clip-text text-transparent">
-                                            {p.description.substring(0, 30)}
+                                            {p.description.substring(0, 18)}..
                                         </div>
                                         <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
                                             RS. <span className='text-md lg:text-lg'>{p.price}</span>

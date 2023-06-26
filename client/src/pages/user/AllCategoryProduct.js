@@ -176,7 +176,7 @@ function AllCategoryProduct() {
                                                 {p.name.substring(0, 20)}
                                             </div>
                                             <div className="text-sm lg:text-base xl:text-xl text-gray-700 bg-gradient-to-b from-red-500 to-yellow-500 bg-clip-text text-transparent">
-                                                {p.description.substring(0, 30)}
+                                                {p.description.substring(0, 18)}..
                                             </div>
                                             <div className="text-sm lg:text-base xl:text-xl text-gray-700 dark:text-gray-400">
                                                 RS. <span className='text-md lg:text-lg'>{p.price}</span>
