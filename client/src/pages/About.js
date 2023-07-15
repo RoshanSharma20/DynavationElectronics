@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
-import logo from "../img/DE_logo.png"
-import { Card } from 'flowbite-react';
+// import logo from "../img/Dynavation_Electronics_logo.jpeg"
+import hantek from "../img/hantek.jpeg"
+import fnirsi from "../img/fnirsi.jpeg"
 import { HiDownload } from 'react-icons/hi'
 import certificateOfIEC from '../components/docs/certificateOfIEC.pdf';
 import Dynavation_ElectronicsPvtLtd from '../components/docs/Dynavation electronicsPvtLtd.pdf';
@@ -12,7 +13,7 @@ import UdyamRegistration from '../components/docs/UdyamRegistration.pdf';
 
 
 function About() {
-    const partners = [{ name: "apple" }, { name: "bosch" }, { name: "ramaiah" }, { name: "dell" }, { name: "siemens" }, { name: "philips" }, { name: "samsung" }, { name: "bajaj" }, { name: "bsnl" }]
+    // const partners = [{ name: "apple" }, { name: "bosch" }, { name: "ramaiah" }, { name: "dell" }, { name: "siemens" }, { name: "philips" }, { name: "samsung" }, { name: "bajaj" }, { name: "bsnl" }]
     return (
         <Layout title={"Dynavation Electronics-About us"}>
             <center>
@@ -59,20 +60,22 @@ function About() {
                 <div className='w-11/12 xl:w-5/6 pt-8'>
                     <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>Our Esteemed Partners</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
-                        {partners.map((partner, i) => (
-                            <div className='p-8'>
-                                <Card
-                                    imgAlt="Meaningful alt text for an image that is not purely decorative"
-                                    imgSrc={logo} key={i} className='h-24 w-24 xl:w-40 xl:h-40'
-                                >
-                                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-black">
-                                        <p>
-                                            {partner.name}
-                                        </p>
-                                    </h5>
-                                </Card>
+                        {/* {partners.map((partner, i) => ( */}
+                        <div className='p-8'>
+                            <div>
+                                <div>
+                                    <img src={hantek} alt="" className='h-24 w-24 xl:w-40 xl:h-40' />
+                                </div>
                             </div>
-                        ))}
+                        </div>
+                        <div className='p-8'>
+                            <div>
+                                <div>
+                                    <img src={fnirsi} alt="" className='h-24 w-24 xl:w-40 xl:h-40' />
+                                </div>
+                            </div>
+                        </div>
+                        {/* ))} */}
                     </div>
                 </div>
                 <div className='mt-16 w-5/6'>
