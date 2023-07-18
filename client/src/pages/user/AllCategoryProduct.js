@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios';
 import { Dropdown } from 'flowbite-react';
 import { Checkbox, Radio } from 'antd';
@@ -110,8 +110,15 @@ function AllCategoryProduct() {
         }
     }
 
+    const topContainer = useRef();
+
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     return (
         <Layout title={"Dynavation Electronics-All Products"}>
+            <div ref={topContainer} />
             <div className='flex flex-row pt-24 md:pt-36 lg:pt-24'>
                 {/* filtering by category */}
                 <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5 text-xl'>

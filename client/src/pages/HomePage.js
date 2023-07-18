@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import axios from 'axios';
 import Layout from '../components/Layout/Layout'
 // import logo from '../img/DE_logo.png'
@@ -34,7 +34,12 @@ function HomePage() {
     const [cart, setCart] = useCart();
     // const partners = [{ name: "apple" }, { name: "bosch" }, { name: "ramaiah" }, { name: "dell" }, { name: "siemens" }, { name: "philips" }, { name: "samsung" }, { name: "bajaj" }, { name: "bsnl" }]
 
+    const topContainer = useRef();
 
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     //get all category
     const getAllCategory = async () => {
         try {
@@ -69,6 +74,7 @@ function HomePage() {
     }, [])
     return (
         <Layout title={"Dynavation Electronics - Home Page"}>
+            <div ref={topContainer} />
             <center>
                 <div className='lg:w-11/12 xl:w-5/6 pt-24 md:pt-36 lg:pt-24'>
                     <Carousel autoplay draggable autoplaySpeed={5000} effect="fade">

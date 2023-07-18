@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from '../components/Layout/Layout'
 import axios from 'axios';
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -55,8 +55,15 @@ function CategoryProduct() {
             console.log(error)
         }
     }
+    const topContainer = useRef();
+
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     return (
         <Layout title={`Dynavation Electronics - ${params?.slug}`}>
+            <div ref={topContainer} />
             <div className='pt-24 md:pt-36 lg:pt-24'>
                 <center>
                     <div className='flex flex-row'>

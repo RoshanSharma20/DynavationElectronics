@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Layout from '../components/Layout/Layout'
 // import logo from "../img/Dynavation_Electronics_logo.jpeg"
 import hantek from "../img/hantek.jpeg"
@@ -14,8 +14,15 @@ import UdyamRegistration from '../components/docs/UdyamRegistration.pdf';
 
 function About() {
     // const partners = [{ name: "apple" }, { name: "bosch" }, { name: "ramaiah" }, { name: "dell" }, { name: "siemens" }, { name: "philips" }, { name: "samsung" }, { name: "bajaj" }, { name: "bsnl" }]
+    const topContainer = useRef();
+
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     return (
         <Layout title={"Dynavation Electronics-About us"}>
+            <div ref={topContainer} />
             <center>
                 <div className='w-5/6 lg:w-4/6 pt-24 md:pt-36 lg:pt-24'>
                     <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>About Us</span></h1>

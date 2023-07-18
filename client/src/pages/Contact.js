@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Layout from '../components/Layout/Layout'
 import emailjs from '@emailjs/browser';
 import { TextInput, Textarea } from 'flowbite-react';
@@ -20,9 +20,15 @@ function Contact() {
                 toast.error("Some error occurred");
             });
     };
+    const topContainer = useRef();
 
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     return (
         <Layout title={"Dynavation Electronics-Contact Us"}>
+            <div ref={topContainer} />
             <Social></Social>
             <center>
                 <div className='w-5/6 pt-24 md:pt-36 lg:pt-24'>
@@ -53,7 +59,7 @@ function Contact() {
                         </div>
                         <div className='w-11/12 pt-4 md:pt-0 md:w-1/2'>
                             <h1 className='text-2xl md:text-3xl'>Come Visit US</h1>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.934782095936!2d77.53132298519182!3d13.076260153671676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x110573c38a840623%3A0xbe7ee25b4a472fa8!2sAnalog%20%26%20Digital%20Devices%20(ADD)!5e0!3m2!1sen!2sin!4v1685619614123!5m2!1sen!2sin" width="100%" height="100%" align="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='md:px-2 md:pb-8' title='contact map'></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15545.481722311923!2d77.5311073!3d13.0756939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bbdf54ec487264f%3A0x4b04a6fdf3376d2d!2sDynavation%20Electronics%20Pvt.ltd.!5e0!3m2!1sen!2sin!4v1689700922108!5m2!1sen!2sin" width="100%" height="100%" align="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='md:px-2 md:pb-8' title='contact map'></iframe>
                         </div>
                     </div>
                 </div>

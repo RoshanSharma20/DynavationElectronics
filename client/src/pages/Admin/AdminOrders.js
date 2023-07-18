@@ -49,7 +49,6 @@ function AdminOrders() {
         }
     };
 
-
     return (
         <Layout title={"All Orders Data"}>
             <center>

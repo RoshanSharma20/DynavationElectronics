@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Layout from '../../components/Layout/Layout'
 import UserMenu from '../../components/Layout/UserMenu'
 import { useAuth } from '../../context/auth';
@@ -7,8 +7,15 @@ import { Dropdown } from 'flowbite-react';
 
 function Dashboard() {
     const [auth] = useAuth();
+    const topContainer = useRef();
+
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
     return (
         <Layout title={"Dashboard - Ecommerce App"}>
+            <div ref={topContainer} />
             <center>
                 <div className='flex flex-row pt-24 md:pt-36 lg:pt-24 w-5/6'>
                     <div className='hidden lg:block lg:basis-2/12 xl:basis-1/5'>

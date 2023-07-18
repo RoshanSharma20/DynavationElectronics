@@ -31,8 +31,8 @@ function Header() {
                         <Navbar.Brand to="/" className='xl:pl-4 2xl:pl-16'>
                             <img src={logo} className="mr-3 object-fill h-16 sm:h-16 lg:h-14 xl:h-16" alt="Dynavation Electronics logo" />
                             <span className="self-center whitespace-nowrap text-lg md:text-sm xl:text-lg font-semibold">
-                                <p className='m-0 p-0'>Dynavation</p>
-                                <p className='m-0 p-0'>Electronics</p>
+                                <p className='m-0 p-0'>DYNAVATION</p>
+                                <p className='m-0 p-0'>ELECTRONICS</p>
                             </span>
                         </Navbar.Brand>
                     </div>
@@ -50,9 +50,9 @@ function Header() {
                         <Link to="/about" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             About
                         </Link>
-                        <Link to="/" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                        {/* <Link to="/" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             Resources
-                        </Link>
+                        </Link> */}
                         <div className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                             <Dropdown inline label="Categories" dismissOnClick={true}>
                                 <Dropdown.Item><Link to="/categories">All Categories</Link></Dropdown.Item>

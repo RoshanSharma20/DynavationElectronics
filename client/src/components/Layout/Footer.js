@@ -13,8 +13,7 @@ function Footer() {
                                 <span className="text-center m-2">Dynavation Electronics</span>
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor
-                                sit amet, consectetur adipisicing elit.
+                                our products and services meet rigorous quality standards and adhere to industry best practices
                             </p>
                         </div>
                         <div className="">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from '../components/Layout/Layout'
 import { useCart } from '../context/Cart'
 import { useAuth } from '../context/auth';
@@ -123,10 +123,16 @@ function CartPage() {
         const razor = new window.Razorpay(options);
         razor.open();
     }
+    const topContainer = useRef();
 
+    useEffect(() => {
+        // To make sure page starts from the top
+        topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
+    }, []);
 
     return (
         <Layout>
+            <div ref={topContainer} />
             <center>
                 <div className='pt-24 md:pt-36 lg:pt-24 w-11/12 lg:w-5/6'>
                     <div className='text-center'>
