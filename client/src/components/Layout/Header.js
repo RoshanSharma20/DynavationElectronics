@@ -44,16 +44,16 @@ function Header() {
                             <SearchInput />
                         </div>
                         <Link
-                            to="/" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                            to="/" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                             Home
                         </Link>
-                        <Link to="/about" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                        <Link to="/about" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                             About
                         </Link>
-                        {/* <Link to="/" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                        {/* <Link to="/" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                             Resources
                         </Link> */}
-                        <div className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                        <div className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                             <Dropdown inline label="Categories" dismissOnClick={true}>
                                 <Dropdown.Item><Link to="/categories">All Categories</Link></Dropdown.Item>
                                 <div>
@@ -63,7 +63,7 @@ function Header() {
                                 </div>
                             </Dropdown>
                         </div>
-                        <Link to="/contactus" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                        <Link to="/contactus" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                             Contact
                         </Link>
                         {
@@ -72,13 +72,13 @@ function Header() {
                                     <Link to="/register" className='text-md xl:text-lg  pt-4  2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
                                         Register
                                     </Link>
-                                    <Link to="/login" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                                    <Link to="/login" className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                                         Login
                                     </Link>
                                 </>
                             ) : (
                                 <>
-                                    <div className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 hover:-translate-y-1 duration-150 hover:scale-110 hover:font-semibold'>
+                                    <div className='text-md xl:text-lg pt-4 2xl:px-2 hover:text-blue-700 hover:underline underline-offset-3 transition ease-in-out delay-200 duration-150 hover:underline hover:font-semibold'>
                                         <Dropdown inline
                                             label={auth?.user?.name}
                                             dismissOnClick={true} >

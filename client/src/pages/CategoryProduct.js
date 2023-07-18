@@ -62,7 +62,7 @@ function CategoryProduct() {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
     }, []);
     return (
-        <Layout title={`Dynavation Electronics - ${params?.slug}`}>
+        <Layout title={`DYNAVATION ELECTRONICS - ${params?.slug}`}>
             <div ref={topContainer} />
             <div className='pt-24 md:pt-36 lg:pt-24'>
                 <center>

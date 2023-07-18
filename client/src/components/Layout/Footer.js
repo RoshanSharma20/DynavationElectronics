@@ -9,12 +9,12 @@ function Footer() {
                 <div className="mx-6 py-10 text-center md:text-left">
                     <div className="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="">
-                            <h6 className="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
-                                <span className="text-center m-2">Dynavation Electronics</span>
+                            <h5 className="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start">
+                                <span className="text-center m-2">DYNAVATION ELECTRONICS</span>
+                            </h5>
+                            <h6>
+                                "Empowering Innovations, Enabling Precision"
                             </h6>
-                            <p>
-                                our products and services meet rigorous quality standards and adhere to industry best practices
-                            </p>
                         </div>
                         <div className="">
                             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
@@ -55,7 +55,7 @@ function Footer() {
                                 Contact
                             </h6>
                             <p className="flex items-center align-start justify-center md:justify-start mb-4">
-                                Dynavation Electronics (DE)
+                                DYNAVATION ELECTRONICS (DE)
                                 #4 ” Swathi” 1st Main Opp, Singapura Garden,
                                 Lakshmipura Road, Abbigere, Bangalore – 560 090
                                 Karnataka, India
@@ -84,7 +84,7 @@ function Footer() {
                 </div>
                 <div className="text-center p-1 bg-gray-400 /">
                     <span>© Copyright:</span>
-                    <a className="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Dynavation Electronics</a>
+                    <a className="text-gray-600 font-semibold" href="https://tailwind-elements.com/">DYNAVATION ELECTRONICS</a>
                 </div>
             </footer>
         </div>

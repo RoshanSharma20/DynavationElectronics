@@ -18,6 +18,8 @@ import { useNavigate } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import hantek from "../img/hantek.jpeg"
 import fnirsi from "../img/fnirsi.jpeg"
+import keysight from "../img/keysignt.jpeg"
+import victor from "../img/victor.jpeg"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -75,11 +77,11 @@ function HomePage() {
         // eslint-disable-next-line
     }, [])
     return (
-        <Layout title={"Dynavation Electronics - Home Page"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <div ref={topContainer} />
             <center>
                 <div className='lg:w-11/12 xl:w-5/6 pt-24 md:pt-36 lg:pt-24'>
-                    <Carousel autoplay draggable autoplaySpeed={5500} effect="fade">
+                    <Carousel autoplay draggable autoplaySpeed={3000} effect="fade">
                         <div>
                             <img
                                 alt="..."
@@ -165,20 +167,34 @@ function HomePage() {
                     </div>
                 </div>
                 <div className='w-11/12 xl:w-5/6 pt-8'>
-                    <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>Our Esteemed Partners</span></h1>
+                    <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>Our Partners</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
                         {/* {partners.map((partner, i) => ( */}
                         <div className='p-8'>
                             <div>
                                 <div>
-                                    <img src={hantek} alt="" className='h-24 w-24 xl:w-40 xl:h-40' />
+                                    <img src={hantek} alt="" className='h-24 w-24 xl:w-44 xl:h-40' />
                                 </div>
                             </div>
                         </div>
                         <div className='p-8'>
                             <div>
                                 <div>
-                                    <img src={fnirsi} alt="" className='h-24 w-24 xl:w-40 xl:h-40' />
+                                    <img src={fnirsi} alt="" className='h-24 w-24 xl:w-44 xl:h-40' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='p-8'>
+                            <div>
+                                <div>
+                                    <img src={keysight} alt="" className='h-24 w-24 xl:w-44 xl:h-40' />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='p-8'>
+                            <div>
+                                <div>
+                                    <img src={victor} alt="" className='h-24 w-24 xl:w-44 xl:h-40' />
                                 </div>
                             </div>
                         </div>

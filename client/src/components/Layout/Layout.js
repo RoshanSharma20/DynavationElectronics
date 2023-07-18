@@ -22,10 +22,10 @@ function Layout({ children, title, description, keywords, author }) {
 }
 
 Layout.defaultProps = {
-    title: "Dyanavation Electronics",
-    description: "Electronics Ecommerce webiste",
-    keywords: "mern,react,node,mongodb",
-    author: "dynavation electronics"
+    title: "DYNAVATION ELECTRONICS",
+    description: "DYNAVATION ELECTRONICS WEBSITE",
+    keywords: "DYNAVATION ELECTRONICS",
+    author: "DYNAVATION ELECTRONICS"
 }
 
 export default Layout

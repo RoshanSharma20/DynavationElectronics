@@ -27,7 +27,7 @@ function Contact() {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
     }, []);
     return (
-        <Layout title={"Dynavation Electronics-Contact Us"}>
+        <Layout title={"DYNAVATION ELECTRONICS - Contact Us"}>
             <div ref={topContainer} />
             <Social></Social>
             <center>
