@@ -54,7 +54,7 @@ function Profile() {
     }, []);
 
     return (
-        <Layout title={"User Dashboard-Profile"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <div ref={topContainer} />
             <center>
                 <div className='flex flex-row pt-24 md:pt-36 lg:pt-24 w-5/6'>

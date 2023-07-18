@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Categories() {
     const categories = useCategory();
     return (
-        <Layout title={'All Categories'}>
+        <Layout title={'DYNAVATION ELECTRONICS'}>
             <h1>All Categories</h1>
             <div className='flex flex-wrap'>
                 {categories?.map((c) => (

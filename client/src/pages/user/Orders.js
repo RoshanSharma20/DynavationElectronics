@@ -31,7 +31,7 @@ function Orders() {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
     }, []);
     return (
-        <Layout title={"User Dashboard-Orders"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <div ref={topContainer} />
             <center>
                 <div className='flex flex-row pt-24 md:pt-36 lg:pt-24 w-11/12 lg:w-5/6'>

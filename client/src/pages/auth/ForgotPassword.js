@@ -34,7 +34,7 @@ function ForgotPassword() {
         }
     };
     return (
-        <Layout title={"Forgot Password - Dynavation Electronics"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <center>
                 <div className='w-5/6 pt-24 md:pt-36 lg:pt-24 relative h-5/6'>
                     <img src={bgLogin} alt="" className='w-full h-5/6 object-cover absolute mix-blend-overlay' />

@@ -23,7 +23,7 @@ function About() {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
     }, []);
     return (
-        <Layout title={"DYNAVATION ELECTRONICS - About us"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <div ref={topContainer} />
             <center>
                 <div className='w-5/6 lg:w-4/6 pt-24 md:pt-36 lg:pt-24'>

@@ -24,7 +24,7 @@ function Header() {
     }
     return (
         <>
-            <Layout title={"Header-Dynavation Electronics"}>
+            <Layout title={"DYNAVATION ELECTRONICS"}>
                 <Navbar
                     fluid={true} className='dark:bg-white fixed w-full z-20 top-0 left-0'>
                     <div className='flex md:basis-full lg:basis-1/12 md:flex justify-center lg:flex-none'>

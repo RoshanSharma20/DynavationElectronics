@@ -117,7 +117,7 @@ function AllCategoryProduct() {
         topContainer.current.scrollIntoView({ block: "end", behavior: 'smooth' });
     }, []);
     return (
-        <Layout title={"Dynavation Electronics-All Products"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <div ref={topContainer} />
             <div className='flex flex-row pt-24 md:pt-36 lg:pt-24'>
                 {/* filtering by category */}

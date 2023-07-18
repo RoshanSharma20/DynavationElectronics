@@ -39,7 +39,7 @@ function Register() {
 
     return (
         <>
-            <Layout title={"Register"}>
+            <Layout title={"DYNAVATION ELECTRONICS"}>
                 <center>
                     <div className='relative h-full w-full'>
                         <img src={bgSignup} alt="" className='w-full h-full object-cover absolute mix-blend-overlay' />

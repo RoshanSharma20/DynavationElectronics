@@ -103,7 +103,7 @@ function UpdateProduct() {
         // eslint-disable-next-line
     }, [])
     return (
-        <Layout title={"Dashboard-Create Product"}>
+        <Layout title={"DYNAVATION ELECTRONICS"}>
             <center>
                 <div className='flex flex-row pt-24 md:pt-36 lg:pt-24 w-5/6'>
                     <div className='hidden lg:block lg:basis-2/12 xl:basis-1/4'>
