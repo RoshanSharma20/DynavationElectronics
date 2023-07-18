@@ -3,6 +3,8 @@ import axios from 'axios';
 import Layout from '../components/Layout/Layout'
 // import logo from '../img/DE_logo.png'
 import slide1 from "../img/slide1.jpeg"
+import slide2 from "../img/slide2.jpeg"
+import slide3 from "../img/slide3.jpeg"
 import { Carousel } from 'antd'
 import { Card } from 'flowbite-react'
 import { FaShippingFast } from 'react-icons/fa'
@@ -77,7 +79,7 @@ function HomePage() {
             <div ref={topContainer} />
             <center>
                 <div className='lg:w-11/12 xl:w-5/6 pt-24 md:pt-36 lg:pt-24'>
-                    <Carousel autoplay draggable autoplaySpeed={5000} effect="fade">
+                    <Carousel autoplay draggable autoplaySpeed={5500} effect="fade">
                         <div>
                             <img
                                 alt="..."
@@ -85,20 +87,20 @@ function HomePage() {
                                 className="object-cover h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto max-w-6xl rounded-lg shadow-xl dark:shadow-gray-800"
                             />
                         </div>
-                        {/* <div >
+                        <div >
                             <img
                                 alt="..."
-                                src={testing}
+                                src={slide2}
                                 className="object-cover h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto max-w-6xl rounded-lg shadow-xl dark:shadow-gray-800"
                             />
                         </div>
                         <div>
                             <img
                                 alt="..."
-                                src={testing}
+                                src={slide3}
                                 className="object-cover h-48 sm:h-64 md:h-80 lg:h-96 max-w-6xl xl:h-auto rounded-lg shadow-xl dark:shadow-gray-800"
                             />
-                        </div> */}
+                        </div>
                     </Carousel>
                 </div>
                 <hr />
