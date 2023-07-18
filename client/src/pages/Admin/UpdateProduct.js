@@ -19,6 +19,7 @@ function UpdateProduct() {
     const [image, setImage] = useState("");
     const [category, setCategory] = useState("");
     const [shipping, setShipping] = useState("");
+    const [url_link, setUrl_Link] = useState("");
     const [id, setId] = useState("");
 
     //get single product
@@ -32,6 +33,7 @@ function UpdateProduct() {
             setQuantity(data.product.quantity);
             setShipping(data.product.shipping);
             setCategory(data.product.category._id);
+            setUrl_Link(data.product.url_link);
         } catch (error) {
             console.log(error);
         }
@@ -62,6 +64,7 @@ function UpdateProduct() {
             productData.append("quantity", quantity);
             image && productData.append("image", image);
             productData.append("shipping", shipping);
+            productData.append("url_link", url_link);
             const { data } = axios.put(`${process.env.REACT_APP_API}/product/update-product/${id}`, productData);
 
             if (data?.success) {
@@ -168,6 +171,11 @@ function UpdateProduct() {
                             <div className='my-4'>
                                 <div>
                                     <TextInput color='dark:bg-white' type="number" placeholder="Enter Product quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
+                                </div>
+                            </div>
+                            <div className='my-4'>
+                                <div>
+                                    <TextInput color='dark:bg-white' type="text" placeholder="Enter Driver Link" value={url_link} onChange={(e) => setUrl_Link(e.target.value)} required />
                                 </div>
                             </div>
                             <div className='my-4'>

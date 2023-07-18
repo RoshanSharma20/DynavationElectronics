@@ -19,7 +19,7 @@ const gateway = new braintree.BraintreeGateway({
 
 module.exports.createProduct = async function (req, res) {
     try {
-        const { name, slug, description, price, category, quantity, shipping } = req.fields;
+        const { name, slug, description, price, category, quantity, shipping, url_link } = req.fields;
         const { image } = req.files;
 
         //validation
@@ -170,7 +170,7 @@ module.exports.deleteProduct = async function (req, res) {
 //update product
 module.exports.updateProduct = async function (req, res) {
     try {
-        const { name, slug, description, price, category, quantity, shipping } = req.fields;
+        const { name, slug, description, price, category, quantity, shipping, url_link } = req.fields;
         const { image } = req.files;
 
         //validation

@@ -18,6 +18,7 @@ function CreateProduct() {
     const [image, setImage] = useState("");
     const [category, setCategory] = useState("");
     const [shipping, setShipping] = useState("");
+    const [url_link, setUrl_Link] = useState("");
 
     //get all category
     const getAllCategory = async () => {
@@ -44,6 +45,7 @@ function CreateProduct() {
             productData.append("quantity", quantity);
             productData.append("image", image);
             productData.append("shipping", shipping);
+            productData.append("url_link", url_link);
             const { data } = axios.post(`${process.env.REACT_APP_API}/product/create-product`, productData);
 
             if (data?.success) {
@@ -127,6 +129,11 @@ function CreateProduct() {
                             <div className='my-4'>
                                 <div>
                                     <TextInput color='dark:bg-white' type="number" placeholder="Enter Product quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} required />
+                                </div>
+                            </div>
+                            <div className='my-4'>
+                                <div>
+                                    <TextInput color='dark:bg-white' type="text" placeholder="Enter Driver Link" value={url_link} onChange={(e) => setUrl_Link(e.target.value)} required />
                                 </div>
                             </div>
                             <div className='my-4'>
