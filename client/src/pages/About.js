@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import Layout from '../components/Layout/Layout'
 // import logo from "../img/Dynavation_Electronics_logo.jpeg"
-import hantek from "../img/hantek.jpeg"
-import fnirsi from "../img/fnirsi.jpeg"
-import keysight from "../img/keysignt.jpeg"
-import victor from "../img/victor.jpeg"
+// import hantek from "../img/hantek.jpeg"
+// import fnirsi from "../img/fnirsi.jpeg"
+// import keysight from "../img/keysignt.jpeg"
+// import victor from "../img/victor.jpeg"
 import { HiDownload } from 'react-icons/hi'
 import certificateOfIEC from '../components/docs/certificateOfIEC.pdf';
 import Dynavation_ElectronicsPvtLtd from '../components/docs/Dynavation electronicsPvtLtd.pdf';
@@ -66,10 +66,9 @@ function About() {
                     </p>
                 </div>
                 {/* Our Esteemed Customers section */}
-                <div className='w-11/12 xl:w-5/6 pt-8'>
+                {/* <div className='w-11/12 xl:w-5/6 pt-8'>
                     <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>Our Partners</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
-                        {/* {partners.map((partner, i) => ( */}
                         <div className='p-8'>
                             <div>
                                 <div>
@@ -98,9 +97,8 @@ function About() {
                                 </div>
                             </div>
                         </div>
-                        {/* ))} */}
                     </div>
-                </div>
+                </div> */}
                 <div className='mt-16 w-5/6'>
                     <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl my-10'><span className='border-4 border-gray-500 font-serif font-bold rounded-xl px-6 py-3 bg-white text-black'>Company Profile</span></h1>
                     <div className='flex justify-evenly flex-wrap'>
